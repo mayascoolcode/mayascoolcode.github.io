@@ -9,10 +9,10 @@
 </head>
 <body>
     <nav class="wrap" id="navGallery">
-        <img src="" alt="gallery image">
+        <img src="/content/assets/gallery.png" alt="gallery image" style="max-width: 140px;">
         <ul class="listgroup">
-            <li><button onclick="showContent('photosectionGallery')">PHOTOS</button></li>
-            <li><button onclick="showContent('videosectionGallery')">VIDEOS</button></li>
+            <li><button onclick="switchGALLERY('photosectionGallery')">PHOTOS</button></li>
+            <li><button onclick="switchGALLERY('videosectionGallery')">VIDEOS</button></li>
         </ul>
     </nav>
     <hr>
@@ -28,7 +28,7 @@
         <section class="grid hide" id="videosectionGallery">
             <div class="video">
                 <video controls muted poster="" src="/content/videos/Inosuke throws a pillow at Zenitsu.mp4"></video>
-                <div class="video-desc">A video description.</div>
+                <div class="video-desc"><p>1/5/2025...A video description.</p></div>
             </div>
         </section>
     </main>

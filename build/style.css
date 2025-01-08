@@ -16,7 +16,9 @@ ______________ ______________   _____  ___________
     --translucent-color:rgba(255, 140, 0, 0.158);
 }
 
-/* ============= SCROLLBAR */
+
+
+/* ============= SCROLLBAR + SELECT */
 ::-webkit-scrollbar {
     width: 10px;
 } 
@@ -26,12 +28,21 @@ ______________ ______________   _____  ___________
 ::-webkit-scrollbar-thumb {
     background: var(--color);
 }
+::selection {
+    color: var(--bg);
+    background: var(--fg);
+}
+  
+
+
 
 /* ============= FONTS */
 @font-face {
     font-family: 'font';
     src: url("/content/fonts/Nouveau_IBM.ttf");
 }
+
+
 
 /* ============= ANIMATIONS */
 @keyframes shake {
@@ -47,12 +58,17 @@ ______________ ______________   _____  ___________
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
-@keyframes flip {
+@keyframes glow {
     to {
-        rotate: 0deg;
-        filter: brightness(100%);
+        filter: brightness(50%);
     }
 }
+@keyframes spread {
+    to {
+        letter-spacing: 10px;
+    }  
+}
+
 
 /* ============= ELEMENTS */
 * {
@@ -68,11 +84,11 @@ html {
     background-color: var(--bg);
 }
 body {
-    line-height: 1.5;
     image-rendering: pixelated; 
     text-rendering: geometricPrecision;
-    font-size: calc(0.8rem + 0.1dvw);
-    padding: 1rem;
+    font-size: clamp(0.65rem, 0.75dvw, 0.85dvw);
+    line-height: 1.5;
+    padding: 0.5rem;
 }
 header, nav, aside, main, footer, section {
     height: fit-content;
@@ -92,10 +108,11 @@ ul, ol, dl {
 a, strong, summary {
     color: var(--color);
 }
+
 img, video {
     display: inline;
 }
-small {
+small, marquee {
     color: var(--dark-color);
 }
 mark {
@@ -111,6 +128,8 @@ hr {
     border-top: 1px dotted var(--dark-color);
     margin: 0.3rem 0;
 }
+
+
 
 /* ============= CLASSES */
 .full {
@@ -132,11 +151,17 @@ hr {
 .listgroup {
     list-style: none;
 }
-.enter {
+.page {
     padding: 0.5rem;
     text-align: center;
     font-style: italic;
     border-radius: 3px;
+}
+.subpage {
+    padding: 0.5rem;
+    max-width: 500px;
+    margin: 1rem 0;
+    font-style: italic;    
 }
 .return {
     max-width: 130px;
@@ -145,7 +170,7 @@ hr {
     right: 0;
     padding: 1rem;
     rotate: 180deg;
-    filter: brightness(40%);
+    filter: brightness(20%);
 }
 .entry {
     margin: 1rem 0;
@@ -167,11 +192,23 @@ hr {
     display: block;
     position: relative;
 }
+.video-desc {
+    color: var(--color);
+}
+.drawing {
+    text-align: center;
+    font-style: italic;
+}
+.big {
+    font-size: 130%;
+}
 .altlink {
     & a {
         text-decoration: none;
     }
 }
+
+
 
 /* ============= IDS */
 /* -------------------------------  INDEX */
@@ -186,9 +223,11 @@ hr {
     max-width: 240px;
     text-align: center;
     margin-top: auto;
+    margin-left: auto;
 }
 #navIndex {
-    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
     grid-template-columns: repeat(2, minmax(30px, 110px));
 }
 /* -------------------------------  404 */
@@ -205,17 +244,22 @@ hr {
 }
 /* -------------------------------  ABOUT */
 #bodyAbout {
-    font-size: 120%;
+    font-size: 97%;
     align-content: center;
     text-align: center;
+}
+#mainAbout {
+    max-width: 600px;
+    margin: auto;
 }
 #socialsAbout {
     justify-content: center;
     gap: 1rem;
+    margin: 0.5rem;
 }
 /* -------------------------------  DIARY */
 #bodyDiary {
-    font-size: 115%;
+    font-size: 85%;
 }
 /* -------------------------------  GALLERY */
 #navGallery {
@@ -229,22 +273,45 @@ hr {
     grid-template-columns: repeat(auto-fill, minmax(100px, 500px));
 }
 /* -------------------------------  PROJECTS */
+#bodyProjects {
+    font-size: 120%;
+}
 #navProjects {
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
+    margin: auto;
 }
-#artsectionProjects, #musicsectionProjects, #gamesectionProjects {
-
-}
-/* -------------------------------  COLLECTION */
-#navCollection {
-    text-align: right;
-}
-#mainCollection {
+/* -------------------------------  DRAWINGS */
+#bodyDrawing {
     text-align: center;
 }
+#mainDrawings {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 400px));
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+/* -------------------------------  COLLECTION */
+#bodyCollection {
+    text-align: center;
+}
+#navlistCollection {
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-transform: uppercase;
+    color: var(--color);
+}
+/* -------------------------------  LEGAL */
+#bodyLegal {
+    font-size: 200%;
+}
 
-/* ============= ADJUSTMENTS */
+
+
+
+
+
+
 body::after {
     content: " ";
     display: block;
@@ -276,13 +343,13 @@ body::before {
 a:hover {
     color: var(--light-color);
 }
-button:hover {
-    background: var(--light-color);
-}
-.enter:hover {
+.page:hover {
     animation: shake 0.6s infinite;
     background: var(--translucent-color);
 }
 .return:hover {
-    animation: flip 0.6s forwards;
+    animation: glow 0.6s forwards;
+}
+.subpage:hover {
+    animation: spread 0.6s forwards;
 }

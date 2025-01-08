@@ -7,25 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>collection | mmmd</title>
 </head>
-<body>
-    <!-- NAV -->
-    <nav id="navCollection">
-        <ul class="wrap listgroup">
-            <li><button onclick="showContent('collectionGifs')">GIFS</button></li>
-            <li><button onclick="showContent('collectionDividers')">DIVIDERS</button></li>
-            <li><button onclick="showContent('collectionBlinkies')">BLINKIES</button></li>
-            <li><button onclick="showContent('collectionButtons')">BUTTONS</button></li>
-            <li><button onclick="showContent('collectionWebsites')">SITES</button></li>
+<body id="bodyCollection">
+    <!-- NAVLIST -->
+    <nav>
+        <ul class="wrap listgroup" id="navlistCollection">
+            <li><input type="checkbox" name="gifs" id="" onclick="showCOLLECTION('gifsCollection', this)"> <label for="gifs">Gifs</label></li>
+            <li><input type="checkbox" name="dividers" id="" onclick="showCOLLECTION('dividersCollection', this)"> <label for="dividers">Dividers</label></li>
+            <li><input type="checkbox" name="blinkies" id="" onclick="showCOLLECTION('blinkiesCollection', this)"> <label for="blinkies">Blinkies</label></li>
+            <li><input type="checkbox" name="buttons" id="" onclick="showCOLLECTION('buttonsCollection', this)"> <label for="buttons">Buttons</label></li>
+            <li><input type="checkbox" name="sites" id="" onclick="showCOLLECTION('sitesCollection', this)"> <label for="sites">Sites</label></li>
         </ul>
     </nav>
-    <hr>
+    <hr> <br>
     <!-- MAIN -->
-    <main id="mainCollection">
+    <main>
+        <img src="/content/assets/collection.png" alt="collection image" style="max-width: 150px;">
         <br>
-        <img src="cetegory image" alt="collection image" id="imageCollection">
         <br>
+        <p>Select something...</p>
         <br>
-        <section id="collectionGifs" class="hide">
+        <section id="gifsCollection" class="hide">
             <img src="/content/gifs/bat.gif" alt="">
             <img src="/content/gifs/camera.gif" alt="">
             <img src="/content/gifs/comp.gif" alt="">
@@ -34,12 +35,12 @@
             <img src="/content/gifs/moth.gif" alt="">
             <img src="/content/gifs/wrap.gif" alt="">
         </section>
-        <section id="collectionDividers" class="hide">
+        <section id="dividersCollection" class="hide">
             <img src="/content/dividers/bones.gif" alt="">
             <img src="/content/dividers/chain.png" alt="" style="max-width: 200px;">
             <img src="/content/dividers/teeth.gif" alt="">
         </section>
-        <section id="collectionBlinkies" class="hide">
+        <section id="blinkiesCollection" class="hide">
             <img src="/content/blinkies/anotherloser.jpg" alt="">
             <img src="/content/blinkies/callsomeone.gif" alt="">
             <img src="/content/blinkies/catlucky.gif" alt="">
@@ -47,14 +48,18 @@
             <img src="/content/blinkies/nightperson.gif" alt="">
             <img src="/content/blinkies/systemofadown.jpg" alt="">
         </section>
-        <section id="collectionButtons" class="hide">
+        <section id="buttonsCollection" class="hide">
             <img src="/content/buttons/wii.png" alt="">
         </section>
-        <section id="collectionWebsites" class="hide">
+        <section id="sitesCollection" class="hide">
             <a href="https://sbbu.neocities.org" target="_blank" rel="noopener noreferrer">sbbu</a>
             <a href="http://undergroundfortress.web.fc2.com" target="_blank" rel="noopener noreferrer">undergroundfortress</a>
             <a href="https://ita.toys" target="_blank" rel="noopener noreferrer">ita.toys</a>
-            <a href="https://driftt.neocities.org" target="_blank" rel="noopener noreferrer">driftt</a>
+            <a href="https://dokode.moe" target="_blank" rel="noopener noreferrer">dokodemo</a>
+            <a href="https://rgbteahouse.neocities.org" target="_blank" rel="noopener noreferrer">rgbteahouse</a>
+            <a href="https://plasticveggies.neocities.org/" target="_blank" rel="noopener noreferrer">plasticveggies</a>
+            <a href="https://obby.dog" target="_blank" rel="noopener noreferrer">vertpush</a>
+            <a href="https://shishka.neocities.org" target="_blank" rel="noopener noreferrer">shiska</a>
         </section>
     </main>
     <div class="return">

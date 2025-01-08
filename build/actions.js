@@ -6,16 +6,39 @@
 // \____|__  /\______  /|____|   |___\_______  /\____|__  /_______  /
 //       \/        \/                      \/         \/        \/ 
 
-// -------------- OPEN/CLOSE :::
-function showContent(c) {
-    var content = document.getElementById(c);
-
-    if (content.style.display == 'none'){
-        content.style.display = 'block';
+// -------------- GALLERY :::
+ function switchGALLERY(g) {
+    
+    var gallery = document.getElementById(g);
+    var photos = document.getElementById('photosectionGallery');
+    var videos = document.getElementById('videosectionGallery');
+    
+    if (gallery.style.display == 'none') {
+        if (g == 'photosectionGallery') {
+            gallery.style.display = 'block';
+            videos.style.display = 'none';
+        }
+        if (g == 'videosectionGallery') {
+            gallery.style.display = 'block';
+            photos.style.display = 'none';
+        }   
     }
     else {
-        content.style.display = 'none';
+        gallery.style.display = 'none';
     };
-
 }
+
+// -------------- COLLECTION :::
+function showCOLLECTION(c, b) {
+    
+    var collection = document.getElementById(c);
+
+    if (b.checked) {
+        collection.style.display = 'block';
+    } 
+    else {
+        collection.style.display = 'none';
+    }
+}
+
 
