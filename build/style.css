@@ -6,8 +6,6 @@ ______________ ______________   _____  ___________
   |____|  \___|_  /_______  /\____|__  /_______  /
                 \/        \/         \/        \/  */
 
-
-
 /* ============= COLORS */
 :root {
     --bg: #000;
@@ -18,8 +16,6 @@ ______________ ______________   _____  ___________
     --translucent-color:rgba(255, 140, 0, 0.158);
 }
 
-
-
 /* ============= SCROLLBAR */
 ::-webkit-scrollbar {
     width: 10px;
@@ -29,229 +25,13 @@ ______________ ______________   _____  ___________
 } 
 ::-webkit-scrollbar-thumb {
     background: var(--color);
-}  
-
-
+}
 
 /* ============= FONTS */
 @font-face {
-    font-family: 'dos';
-    src: url("/content/font/ModernDOS9x16.ttf");
+    font-family: 'font';
+    src: url("/content/fonts/Nouveau_IBM.ttf");
 }
-
-
-
-/* ============= ELEMENTS */
-* {
-    margin: 0; padding: 0; max-width: 100%; box-sizing: border-box;
-    cursor: url(https://cur.cursors-4u.net/special/spe-2/spe125.cur), auto !important; /* End https://www.cursors-4u.com */
-}
-html {
-    color: var(--fg);
-    background-color: var(--bg);
-    background: url("/content/backgrounds/bg.gif");
-}
-body {
-    font: calc(0.75rem + 0.1vw) 'dos';
-    padding: 0.5rem; line-height: 1.5; letter-spacing: 1px;
-    image-rendering: pixelated; text-rendering: geometricPrecision;
-}
-header, nav, aside, main, footer, section {
-    height: fit-content;
-    padding: 0.3rem;
-}
-a {
-    color: var(--color);
-    text-underline-offset: 2px;
-}
-strong, summary {
-    color: var(--color);
-}
-small {
-    color: var(--dark-color);
-}
-img, video {
-    display: inline;
-    filter: grayscale(100%);
-}
-hr {
-    border: none;
-    border-top: 1px dotted var(--dark-color);
-    margin: 0.3rem 0;
-}
-ul, ol, dl {
-    list-style-position: inside;
-}
-mark {
-    color: var(--bg);
-    background: var(--color);
-}
-button {
-    border: 1px solid;
-    font-family: 'dos';
-    padding: 0.2rem 0.4rem;
-    color: var(--bg);
-    background: var(--color);
-    margin: 0.2rem;
-    letter-spacing: 5px;
-    text-align: center;
-}
-
-
-
-/* ============= CLASSES */
-.full {
-    height: 100dvh;
-}
-.wrap {
-    display: flex;
-    flex-wrap: wrap;
-}
-.hf-center {
-    text-align: center;
-}
-.grid {
-    display: grid;
-}
-.small-icon {
-    max-width: 20px;
-}
-.mid-icon {
-    max-width: 70px;
-}
-.listgroup {
-    list-style: none;
-}
-.altlink {
-    & a {
-        text-decoration: none;
-    }
-}
-.blur {
-    filter: blur(9px);
-}
-.enter {
-    padding: 0.5rem;
-    text-align: center;
-    font-style: italic;
-    border-radius: 3px;
-}
-.return {
-    max-width: 130px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    padding: 1rem;
-    rotate: 180deg;
-    filter: brightness(40%);
-}
-.blank-bg {
-    background: var(--bg);
-}
-.default {
-    display: block;
-}
-.find {
-    display: none;
-}
-.entry {
-    text-align: right;
-}
-.entry-date {
-    font-size: 120%;
-    justify-content: space-between;
-}
-.photo {
-    padding: 0.4rem;
-}
-.video {
-    padding: 0.4rem;
-}
-.game {
-
-}
-
-
-
-/* ============= IDS */
-/* -------------------------------  INDEX */
-#bodyIndex {
-    flex-direction: column;
-    justify-content: space-between;
-}
-#headerIndex {
-    max-width: 250px;
-    margin-left: auto;
-    text-align: center;
-    margin-top: auto;
-}
-#navIndex {
-    margin-right: auto;
-    gap: 0.8rem;
-    grid-template-columns: repeat(2, minmax(30px, 100px));
-}
-#socialsIndex {
-    justify-content: center;
-    gap: 1rem;
-}
-/* -------------------------------  404 */
-#body404 {
-    font-size: 160%;
-    align-content: center;
-    text-align: center;
-}
-/* -------------------------------  ABOUT */
-/* -------------------------------  DIARY */
-#navDiary {
-    gap: 1rem;
-}
-#mainDiary {
-    text-align: right;
-}
-/* -------------------------------  GALLERY */
-#bodyGallery {
-    text-align: center;
-}
-#navGallery {
-    gap: 1rem;
-}
-#mainGallery {
-    text-align: left;
-}
-#photosGallery {
-    gap: 0.4rem;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 230px));
-}
-#videosGallery {
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 500px));
-}
-/* -------------------------------  PROJECTS */
-#projectsNav {
-    gap: 1rem;
-}
-#projectsDefault, #projectsArt, #projectsMusic, #projectsGames {
-
-}
-/* -------------------------------  COLLECTION */
-#collectionBody {
-}
-#collectionGifs, #collectionButtons, #collectionBlinkies {
-    text-align: right;
-}
-#collectionDividers, #collectionButtons {
-    text-align: left;
-}
-#collectionWebsites {
-    text-align: center;
-}
-/* -------------------------------  SITEMAP */
-#bodySitemap {
-    font-size: 170%;
-    line-height: 2;
-}
-
-
 
 /* ============= ANIMATIONS */
 @keyframes shake {
@@ -274,7 +54,195 @@ button {
     }
 }
 
+/* ============= ELEMENTS */
+* {
+    margin: 0; 
+    padding: 0; 
+    max-width: 100%; 
+    font-family: 'font';
+    box-sizing: border-box;
+    cursor: url(https://cur.cursors-4u.net/special/spe-2/spe125.cur), auto !important; /* End https://www.cursors-4u.com */
+}
+html {
+    color: var(--fg);
+    background-color: var(--bg);
+}
+body {
+    line-height: 1.5;
+    image-rendering: pixelated; 
+    text-rendering: geometricPrecision;
+    font-size: calc(0.8rem + 0.1dvw);
+    padding: 1rem;
+}
+header, nav, aside, main, footer, section {
+    height: fit-content;
+}
+button {
+    border: 1px solid;
+    padding: 0.35rem;
+    width: 80px;
+    color: var(--bg);
+    background: var(--color);
+    text-align: center;
+    margin: 0.5rem;
+}
+ul, ol, dl {
+    list-style-position: inside;
+}
+a, strong, summary {
+    color: var(--color);
+}
+img, video {
+    display: inline;
+}
+small {
+    color: var(--dark-color);
+}
+mark {
+    color: var(--bg);
+    background: var(--color);
+}
+time {
+    color: var(--color);
+    background: var(--fg);
+}
+hr {
+    border: none;
+    border-top: 1px dotted var(--dark-color);
+    margin: 0.3rem 0;
+}
 
+/* ============= CLASSES */
+.full {
+    height: 100dvh;
+}
+.grid {
+    display: grid;
+}
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.hide {
+    display: none;
+}
+.icon {
+    max-width: 25px;
+}
+.listgroup {
+    list-style: none;
+}
+.enter {
+    padding: 0.5rem;
+    text-align: center;
+    font-style: italic;
+    border-radius: 3px;
+}
+.return {
+    max-width: 130px;
+    position: fixed;
+    bottom:  0;
+    right: 0;
+    padding: 1rem;
+    rotate: 180deg;
+    filter: brightness(40%);
+}
+.entry {
+    margin: 1rem 0;
+    text-align: right;
+}
+.photo {
+    position: relative;
+}
+.photo-date {
+    color: var(--color);
+    background: var(--fg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.video {
+    padding: 0.4rem;
+    max-width: 500px;
+    display: block;
+    position: relative;
+}
+.altlink {
+    & a {
+        text-decoration: none;
+    }
+}
+
+/* ============= IDS */
+/* -------------------------------  INDEX */
+#htmlIndex {
+    background: url("/content/backgrounds/bg.gif");
+}
+#bodyIndex {
+    flex-direction: column;
+    justify-content: space-between;
+}
+#headerIndex {
+    max-width: 240px;
+    text-align: center;
+    margin-top: auto;
+}
+#navIndex {
+    margin-left: auto;
+    grid-template-columns: repeat(2, minmax(30px, 110px));
+}
+/* -------------------------------  404 */
+#body404 {
+    line-height: 2;
+    font-size: 270%;
+    align-content: center;
+    text-align: center;
+}
+/* -------------------------------  SITEMAP */
+#bodySitemap {
+    font-size: 190%;
+    line-height: 2;
+}
+/* -------------------------------  ABOUT */
+#bodyAbout {
+    font-size: 120%;
+    align-content: center;
+    text-align: center;
+}
+#socialsAbout {
+    justify-content: center;
+    gap: 1rem;
+}
+/* -------------------------------  DIARY */
+#bodyDiary {
+    font-size: 115%;
+}
+/* -------------------------------  GALLERY */
+#navGallery {
+    justify-content: space-between;
+    align-items: center;
+}
+#photosectionGallery {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 300px));
+}
+#videosectionGallery {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 500px));
+}
+/* -------------------------------  PROJECTS */
+#navProjects {
+    justify-content: space-between;
+    align-items: center;
+}
+#artsectionProjects, #musicsectionProjects, #gamesectionProjects {
+
+}
+/* -------------------------------  COLLECTION */
+#navCollection {
+    text-align: right;
+}
+#mainCollection {
+    text-align: center;
+}
 
 /* ============= ADJUSTMENTS */
 body::after {
@@ -317,7 +285,4 @@ button:hover {
 }
 .return:hover {
     animation: flip 0.6s forwards;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: var(--light-color);
 }
