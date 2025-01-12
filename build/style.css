@@ -1,50 +1,28 @@
-/* 
-______________ ______________   _____  ___________
-\__    ___/   |   \_   _____/  /     \ \_   _____/
-  |    | /    ~    \    __)_  /  \ /  \ |    __)_ 
-  |    | \    Y    /        \/    Y    \|        \
-  |____|  \___|_  /_______  /\____|__  /_______  /
-                \/        \/         \/        \/  */
+/* clear */
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-family: 'NIBM';
+}
 
-/* ============= COLORS */
+/* root */
 :root {
-    --bg: #000;
-    --fg: #e7e7e7;
-    --color:#d54221;
-    --light-color:rgb(255, 151, 65);
-    --dark-color:#666666;
-    --translucent-color:rgba(255, 140, 0, 0.158);
+    --bg:#000;
+    --fg:#a3a3a3;
+    --acc:#333;
+    --trans:#acacac21;
+    --color:#fff;
 }
 
-
-
-/* ============= SCROLLBAR + SELECT */
-::-webkit-scrollbar {
-    width: 10px;
-} 
-::-webkit-scrollbar-track {
-    background: var(--fg);
-} 
-::-webkit-scrollbar-thumb {
-    background: var(--color);
-}
-::selection {
-    color: var(--bg);
-    background: var(--fg);
-}
-  
-
-
-
-/* ============= FONTS */
+/* fonts */
 @font-face {
-    font-family: 'font';
-    src: url("/content/fonts/Nouveau_IBM.ttf");
+    font-family: 'NIBM';
+    src: url("/content/font/Nouveau_IBM.ttf");
 }
 
-
-
-/* ============= ANIMATIONS */
+/* animations */
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -70,92 +48,75 @@ ______________ ______________   _____  ___________
 }
 
 
-/* ============= ELEMENTS */
-* {
-    margin: 0; 
-    padding: 0; 
-    max-width: 100%; 
-    font-family: 'font';
-    box-sizing: border-box;
-    cursor: url(https://cur.cursors-4u.net/special/spe-2/spe125.cur), auto !important; /* End https://www.cursors-4u.com */
-}
+/* elements */
 html {
     color: var(--fg);
     background-color: var(--bg);
 }
 body {
-    image-rendering: pixelated; 
-    text-rendering: geometricPrecision;
-    font-size: clamp(0.65rem, 0.75dvw, 0.85dvw);
+    --size:calc(0.8rem + 0.1vw);
+    padding: 1rem;
+    font-size: var(--size);
     line-height: 1.5;
-    padding: 0.5rem;
 }
-header, nav, aside, main, footer, section {
+header, nav, aside, main, footer {
     height: fit-content;
+    padding: 0.3rem;
 }
 button {
     border: 1px solid;
-    padding: 0.35rem;
-    width: 80px;
-    color: var(--bg);
-    background: var(--color);
-    text-align: center;
-    margin: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.3rem;
 }
-ul, ol, dl {
-    list-style-position: inside;
+small {
+    color: var(--acc);
 }
-a, strong, summary {
+strong {
     color: var(--color);
-}
-
-img, video {
-    display: inline;
-}
-small, marquee {
-    color: var(--dark-color);
 }
 mark {
     color: var(--bg);
-    background: var(--color);
-}
-time {
-    color: var(--color);
-    background: var(--fg);
+    background-color: var(--color);
+    padding: 0.2rem;
 }
 hr {
     border: none;
-    border-top: 1px dotted var(--dark-color);
+    border-top: 2px dotted var(--acc);
     margin: 0.3rem 0;
 }
+a {
+    color: var(--color);
+    text-decoration: none;
+}
 
-
-
-/* ============= CLASSES */
-.full {
-    height: 100dvh;
+/* classes */
+.full { 
+    height: 100dvh; 
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 .grid {
     display: grid;
 }
-.wrap {
-    display: flex;
-    flex-wrap: wrap;
+.listgroup {
+    list-style: none;
+}
+.big {
+    font-size: calc(var(--size)*1.3);
+    color: var(--color);
 }
 .hide {
     display: none;
 }
-.icon {
-    max-width: 25px;
-}
-.listgroup {
-    list-style: none;
-}
 .page {
-    padding: 0.5rem;
     text-align: center;
     font-style: italic;
-    border-radius: 3px;
+    padding: 0.5rem;
+    text-decoration: underline;
+    filter: grayscale(100%) contrast(2);
 }
 .subpage {
     padding: 0.5rem;
@@ -164,24 +125,27 @@ hr {
     font-style: italic;    
 }
 .return {
-    max-width: 130px;
     position: fixed;
-    bottom:  0;
+    bottom: 0;
     right: 0;
-    padding: 1rem;
+    max-width: 100px;
+    margin: 1rem;
     rotate: 180deg;
     filter: brightness(20%);
 }
+.subreturn {
+    text-align: center;
+    margin-bottom: 2rem;
+}
 .entry {
-    margin: 1rem 0;
     text-align: right;
 }
 .photo {
     position: relative;
 }
 .photo-date {
-    color: var(--color);
-    background: var(--fg);
+    color: var(--bg);
+    background: var(--color);
     position: absolute;
     top: 0;
     left: 0;
@@ -199,89 +163,63 @@ hr {
     text-align: center;
     font-style: italic;
 }
-.big {
-    font-size: 130%;
-}
 .altlink {
     & a {
         text-decoration: none;
     }
 }
 
-
-
-/* ============= IDS */
-/* -------------------------------  INDEX */
+/* ids */
 #htmlIndex {
-    background: url("/content/backgrounds/bg.gif");
+    background-image: url("/content/bg/bg.gif");
 }
 #bodyIndex {
     flex-direction: column;
     justify-content: space-between;
 }
-#headerIndex {
-    max-width: 240px;
-    text-align: center;
-    margin-top: auto;
-    margin-left: auto;
-}
 #navIndex {
     margin-right: auto;
     margin-bottom: auto;
-    grid-template-columns: repeat(2, minmax(30px, 110px));
+    max-width: 200px;
+    gap: 0.7rem;
+    grid-template-columns: repeat(2, minmax(0, 200px));
 }
-/* -------------------------------  404 */
-#body404 {
-    line-height: 2;
-    font-size: 270%;
-    align-content: center;
+#headerIndex {
+    max-width: 250px;
     text-align: center;
+    margin-left: auto;
+    margin-top: auto;
 }
-/* -------------------------------  SITEMAP */
-#bodySitemap {
-    font-size: 190%;
-    line-height: 2;
-}
-/* -------------------------------  ABOUT */
 #bodyAbout {
-    font-size: 97%;
-    align-content: center;
     text-align: center;
+    justify-content: center;
+    align-content: center;
 }
 #mainAbout {
-    max-width: 600px;
-    margin: auto;
+    max-width: 500px;
 }
 #socialsAbout {
     justify-content: center;
-    gap: 1rem;
-    margin: 0.5rem;
+    margin: 1rem;
 }
-/* -------------------------------  DIARY */
-#bodyDiary {
-    font-size: 85%;
-}
-/* -------------------------------  GALLERY */
-#navGallery {
+#navMemories {
     justify-content: space-between;
     align-items: center;
 }
-#photosectionGallery {
+#photosMemories {
     grid-template-columns: repeat(auto-fill, minmax(100px, 300px));
 }
-#videosectionGallery {
+#videosMemories {
     grid-template-columns: repeat(auto-fill, minmax(100px, 500px));
 }
-/* -------------------------------  PROJECTS */
-#bodyProjects {
-    font-size: 120%;
-}
-#navProjects {
+#bodyOfferings {
+    justify-content: center;
+    align-content: center;
+    font-size: calc(var(--size)*1.5);
     text-align: center;
-    margin: auto;
+    line-height: 2;
 }
-/* -------------------------------  DRAWINGS */
-#bodyDrawing {
+#bodyDrawings {
     text-align: center;
 }
 #mainDrawings {
@@ -290,28 +228,41 @@ hr {
     justify-items: center;
     align-items: center;
 }
-/* -------------------------------  COLLECTION */
-#bodyCollection {
-    text-align: center;
-}
-#navlistCollection {
-    justify-content: center;
+#navShrines {
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+}
+#navlistShrines {
+    gap: 1.3rem;
     text-transform: uppercase;
-    color: var(--color);
 }
-/* -------------------------------  LEGAL */
-#bodyLegal {
-    font-size: 200%;
+#bodyDirectory {
+    font-size: calc(var(--size)*2.3);
+}
+#body404 {
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    font-size: calc(var(--size)*3);
 }
 
+/* select */
+::-webkit-scrollbar {
+    width: 10px;
+} 
+::-webkit-scrollbar-track {
+    background: var(--fg);
+} 
+::-webkit-scrollbar-thumb {
+    background: var(--color);
+}
+::selection {
+    color: var(--bg);
+    background: var(--fg);
+}
+  
 
-
-
-
-
-
+/* adjustments */
 body::after {
     content: " ";
     display: block;
@@ -345,7 +296,7 @@ a:hover {
 }
 .page:hover {
     animation: shake 0.6s infinite;
-    background: var(--translucent-color);
+    background: var(--trans);
 }
 .return:hover {
     animation: glow 0.6s forwards;
@@ -353,3 +304,4 @@ a:hover {
 .subpage:hover {
     animation: spread 0.6s forwards;
 }
+

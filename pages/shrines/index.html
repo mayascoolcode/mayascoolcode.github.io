@@ -5,28 +5,25 @@
     <script src="/build/actions.js"></script>
     <link rel="stylesheet" href="/build/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>collection | mmmd</title>
+    <title>mmmd | shrines </title>
 </head>
-<body id="bodyCollection">
-    <!-- NAVLIST -->
-    <nav>
-        <ul class="wrap listgroup" id="navlistCollection">
-            <li><input type="checkbox" name="gifs" id="" onclick="showCOLLECTION('gifsCollection', this)"> <label for="gifs">Gifs</label></li>
-            <li><input type="checkbox" name="dividers" id="" onclick="showCOLLECTION('dividersCollection', this)"> <label for="dividers">Dividers</label></li>
-            <li><input type="checkbox" name="blinkies" id="" onclick="showCOLLECTION('blinkiesCollection', this)"> <label for="blinkies">Blinkies</label></li>
-            <li><input type="checkbox" name="buttons" id="" onclick="showCOLLECTION('buttonsCollection', this)"> <label for="buttons">Buttons</label></li>
-            <li><input type="checkbox" name="sites" id="" onclick="showCOLLECTION('sitesCollection', this)"> <label for="sites">Sites</label></li>
+<body>
+    <nav id="navShrines" class="flex">
+        <ul class="flex listgroup" id="navlistShrines">
+            <li><input type="checkbox" name="gifs" id="" onclick="showSHRINE('gifShrine', this)"> <label for="gifs">Gifs</label></li>
+            <li><input type="checkbox" name="dividers" id="" onclick="showSHRINE('dividerShrine', this)"> <label for="dividers">Dividers</label></li>
+            <li><input type="checkbox" name="blinkies" id="" onclick="showSHRINE('blinkieShrine', this)"> <label for="blinkies">Blinkies</label></li>
+            <li><input type="checkbox" name="buttons" id="" onclick="showSHRINE('buttonShrine', this)"> <label for="buttons">Buttons</label></li>
+            <li><input type="checkbox" name="sites" id="" onclick="showSHRINE('siteShrine', this)"> <label for="sites">Sites</label></li>
         </ul>
+        <img src="/content/assets/shrines.png" alt="Shrine image" style="max-width: 50px;">
     </nav>
-    <hr> <br>
+    <hr>
     <!-- MAIN -->
     <main>
-        <img src="/content/assets/collection.png" alt="collection image" style="max-width: 150px;">
-        <br>
-        <br>
         <p>Select something...</p>
         <br>
-        <section id="gifsCollection" class="hide">
+        <section id="gifShrine" class="hide">
             <img src="/content/gifs/bat.gif" alt="">
             <img src="/content/gifs/camera.gif" alt="">
             <img src="/content/gifs/comp.gif" alt="">
@@ -35,12 +32,12 @@
             <img src="/content/gifs/moth.gif" alt="">
             <img src="/content/gifs/wrap.gif" alt="">
         </section>
-        <section id="dividersCollection" class="hide">
+        <section id="dividerShrine" class="hide">
             <img src="/content/dividers/bones.gif" alt="">
             <img src="/content/dividers/chain.png" alt="" style="max-width: 200px;">
             <img src="/content/dividers/teeth.gif" alt="">
         </section>
-        <section id="blinkiesCollection" class="hide">
+        <section id="blinkieShrine" class="hide">
             <img src="/content/blinkies/anotherloser.jpg" alt="">
             <img src="/content/blinkies/callsomeone.gif" alt="">
             <img src="/content/blinkies/catlucky.gif" alt="">
@@ -48,10 +45,10 @@
             <img src="/content/blinkies/nightperson.gif" alt="">
             <img src="/content/blinkies/systemofadown.jpg" alt="">
         </section>
-        <section id="buttonsCollection" class="hide">
+        <section id="buttonShrine" class="hide">
             <img src="/content/buttons/wii.png" alt="">
         </section>
-        <section id="sitesCollection" class="hide">
+        <section id="siteShrine" class="hide">
             <a href="https://sbbu.neocities.org" target="_blank" rel="noopener noreferrer">sbbu</a>
             <a href="http://undergroundfortress.web.fc2.com" target="_blank" rel="noopener noreferrer">undergroundfortress</a>
             <a href="https://ita.toys" target="_blank" rel="noopener noreferrer">ita.toys</a>
@@ -62,10 +59,6 @@
             <a href="https://shishka.neocities.org" target="_blank" rel="noopener noreferrer">shiska</a>
         </section>
     </main>
-    <div class="return">
-        <a href="/index.html">
-            <img src="/content/assets/sigil.png" alt="">
-        </a>
-    </div>
+    <div class="return"><a href="/index.html"><img src="/content/assets/sigil.png" alt=""></a></div>
 </body>
 </html>

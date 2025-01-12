@@ -5,37 +5,33 @@
     <script src="/build/actions.js"></script>
     <link rel="stylesheet" href="/build/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gallery | mmmd</title>
+    <title>mmmd | memories </title>
 </head>
 <body>
-    <nav class="wrap" id="navGallery">
-        <img src="/content/assets/gallery.png" alt="gallery image" style="max-width: 140px;">
+    <nav class="flex" id="navMemories">
+        <img src="/content/assets/memories.png" alt="gallery image" style="max-width: 100px;">
         <ul class="listgroup">
-            <li><button onclick="switchGALLERY('photosectionGallery')">PHOTOS</button></li>
-            <li><button onclick="switchGALLERY('videosectionGallery')">VIDEOS</button></li>
+            <li><button onclick="switchMEMORIES('photosMemories')">PHOTOS</button></li>
+            <li><button onclick="switchMEMORIES('videosMemories')">VIDEOS</button></li>
         </ul>
     </nav>
     <hr>
     <main>
         <!-- PHOTO SECTION -->
-        <section class="grid" id="photosectionGallery">
+        <section class="grid" id="photosMemories">
             <div class="photo">
                 <img src="/content/photos/yaoiblackkitty.JPG" alt="black kitty in yaoi manga">
                 <div class="photo-date">1/3/2025</div>
             </div>
         </section>
         <!-- VIDEO SECTION -->
-        <section class="grid hide" id="videosectionGallery">
+        <section class="grid hide" id="videosMemories">
             <div class="video">
                 <video controls muted poster="" src="/content/videos/Inosuke throws a pillow at Zenitsu.mp4"></video>
                 <div class="video-desc"><p>1/5/2025...A video description.</p></div>
             </div>
         </section>
     </main>
-    <div class="return">
-        <a href="/index.html">
-            <img src="/content/assets/sigil.png" alt="">
-        </a>
-    </div>
+    <div class="return"><a href="/index.html"><img src="/content/assets/sigil.png" alt=""></a></div>
 </body>
 </html>

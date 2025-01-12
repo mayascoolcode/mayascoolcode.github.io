@@ -1,43 +1,35 @@
-
-// _____  ____________________.___________    _______    _________
-// /  _  \ \_   ___ \__    ___/|   \_____  \   \      \  /   _____/
-// /  /_\  \/    \  \/ |    |   |   |/   |   \  /   |   \ \_____  \ 
-// /    |    \     \____|    |   |   /    |    \/    |    \/        \
-// \____|__  /\______  /|____|   |___\_______  /\____|__  /_______  /
-//       \/        \/                      \/         \/        \/ 
-
-// -------------- GALLERY :::
- function switchGALLERY(g) {
+// switch section in memories
+function switchMEMORIES(m) {
     
-    var gallery = document.getElementById(g);
-    var photos = document.getElementById('photosectionGallery');
-    var videos = document.getElementById('videosectionGallery');
+    var memory = document.getElementById(m);
+    var photos = document.getElementById('photosMemories');
+    var videos = document.getElementById('videosMemories');
     
-    if (gallery.style.display == 'none') {
-        if (g == 'photosectionGallery') {
-            gallery.style.display = 'block';
+    if (memory.style.display == 'none') {
+        if (m == 'photosMemories') {
+            memory.style.display = 'block';
             videos.style.display = 'none';
         }
-        if (g == 'videosectionGallery') {
-            gallery.style.display = 'block';
+        if (m == 'videosMemories') {
+            memory.style.display = 'block';
             photos.style.display = 'none';
         }   
     }
     else {
-        gallery.style.display = 'none';
+        memory.style.display = 'none';
     };
 }
 
-// -------------- COLLECTION :::
-function showCOLLECTION(c, b) {
+// display a shrine
+function showSHRINE(s, b) {
     
-    var collection = document.getElementById(c);
+    var shrine = document.getElementById(s);
 
     if (b.checked) {
-        collection.style.display = 'block';
+        shrine.style.display = 'block';
     } 
     else {
-        collection.style.display = 'none';
+        shrine.style.display = 'none';
     }
 }
 
