@@ -4,7 +4,7 @@
     padding: 0;
     max-width: 100%;
     box-sizing: border-box;
-    font-family: 'GoMono Nerd Font';
+    font-family: 'GoMono Nerd Font', serif;
     cursor: url(https://cur.cursors-4u.net/food/foo-4/foo323.cur), auto !important; /* https://www.cursors-4u.com */
 }
 
@@ -195,7 +195,7 @@ strong, a {
     margin-bottom: auto;
     max-width: 200px;
     gap: 0.5rem;
-    grid-template-columns: repeat(2, minmax(0, 170px));
+    grid-template-columns: repeat(2, minmax(0, 175px));
 }
 #headerIndex {
     max-width: 200px;
