@@ -4,7 +4,8 @@
     padding: 0;
     max-width: 100%;
     box-sizing: border-box;
-    font-family: 'NIBM';
+    font-family: 'GoMono Nerd Font';
+    cursor: url(https://cur.cursors-4u.net/food/foo-4/foo323.cur), auto !important; /* https://www.cursors-4u.com */
 }
 
 /* root */
