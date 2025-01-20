@@ -240,6 +240,7 @@ strong, a {
     gap: 1rem;
     justify-items: center;
     align-items: center;
+    margin: auto;
 }
 #navShrines {
     justify-content: space-between;
