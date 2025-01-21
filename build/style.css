@@ -4,7 +4,7 @@
     padding: 0;
     max-width: 100%;
     box-sizing: border-box;
-    font-family: 'GoMono Nerd Font', times;
+    font-family: 'Times New Roman', Times, serif;
     cursor: url('https://cur.cursors-4u.net/others/oth-6/oth589.cur'), auto !important; /* https://www.cursors-4u.com */
 }
 
@@ -15,12 +15,6 @@
     --color:#f3662e;
     --dim:#444649;
     --trans:#f3662e27;
-}
-
-/* fonts */
-@font-face {
-    font-family: 'GoMono Nerd Font';
-    src: url("/content/font/GoMonoNerdFont-Regular.ttf");
 }
 
 /* animations */
@@ -55,7 +49,7 @@ html {
     background-color: var(--bg);
 }
 body {
-    --size:calc(0.7em + 0.1dvw);
+    --size:calc(0.9em + 0.1dvw);
     padding: 1rem;
     font-size: var(--size);
     line-height: 1.5;
