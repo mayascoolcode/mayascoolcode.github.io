@@ -4,7 +4,7 @@
     padding: 0;
     max-width: 100%;
     box-sizing: border-box;
-    font-family: 'GoMono Nerd Font', serif;
+    font-family: 'GoMono Nerd Font', times;
     cursor: url('https://cur.cursors-4u.net/others/oth-6/oth589.cur'), auto !important; /* https://www.cursors-4u.com */
 }
 
@@ -19,8 +19,8 @@
 
 /* fonts */
 @font-face {
-    font-family: 'NIBM';
-    src: url("/content/font/Nouveau_IBM.ttf");
+    font-family: 'GoMono Nerd Font';
+    src: url("/content/font/GoMonoNerdFont-Regular.ttf");
 }
 
 /* animations */
@@ -193,12 +193,12 @@ strong, a {
 #navIndex {
     margin-right: auto;
     margin-bottom: auto;
-    max-width: 200px;
+    max-width: 230px;
     gap: 0.5rem;
-    grid-template-columns: repeat(2, minmax(0, 175px));
+    grid-template-columns: repeat(2, minmax(0, 180px));
 }
 #headerIndex {
-    max-width: 200px;
+    max-width: 250px;
     text-align: center;
     margin-left: auto;
     margin-top: auto;
