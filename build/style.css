@@ -4,22 +4,25 @@
     padding: 0;
     max-width: 100%;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'GoMono', Times, serif;
     cursor: url('https://cur.cursors-4u.net/others/oth-6/oth589.cur'), auto !important; /* https://www.cursors-4u.com */
 }
-
-
 
 /* root */
 :root {
     --bg:#000;
     --fg:#ffffe2;
-    --color:#9c441f;
-    --light:#fd9b57;
+    --color:#da541b;
+    --light:#fdb851;
     --dim:#444649;
     --trans:#560a0248;
 }
 
+/* font */
+@font-face {
+    font-family: 'GoMono';
+    src: url("/content/font/GoMonoNerdFontPropo-Regular.ttf");
+}
 
 
 /* animations */
@@ -47,15 +50,13 @@
     }  
 }
 
-
-
 /* elements */
 html {
     color: var(--fg);
     background-color: var(--bg);
 }
 body {
-    --size:clamp(0.8rem, 0.9vw, 1.0vw);
+    --size:clamp(0.6rem, 0.7vw, 0.8vw);
     padding: 1rem;
     font-size: var(--size);
     line-height: 1.5;
@@ -86,8 +87,6 @@ hr {
 strong, a {
     color: var(--color);
 }
-
-
 
 /* classes */
 .full { 
@@ -183,8 +182,20 @@ strong, a {
         color: var(--dim);
     }
 }
-
-
+.big-link {
+    padding: 0.5rem;
+    margin: 1rem;
+    display: flex;
+    background: var(--color);
+    width: 250px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+    border: 1px outset var(--light);
+    & a {
+        color: var(--fg);
+    }
+}
 
 /* ids */
 #htmlIndex {
@@ -214,10 +225,6 @@ strong, a {
 }
 #mainAbout {
     max-width: 700px;
-}
-#socialsAbout {
-    justify-content: center;
-    margin: 1rem;
 }
 #navMemories {
     justify-content: space-between;
@@ -263,8 +270,14 @@ strong, a {
     align-content: center;
     font-size: calc(var(--size)*3);
 }
-
-
+#bodyLinks {
+    justify-content: center;
+    align-content: center;
+    font-size: calc(var(--size)*1.2);
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 1px;
+}
 
 /* select */
 ::-webkit-scrollbar {
@@ -281,8 +294,6 @@ strong, a {
     background: var(--fg);
 }
   
-
-
 /* adjustments */
 body::after {
     content: " ";
@@ -327,4 +338,11 @@ button:hover {
 }
 .subpage:hover {
     animation: spread 0.6s forwards;
+}
+.big-link:hover {
+    background: var(--light);
+    border-color: var(--color);
+    & a {
+        color: var(--color);
+    }
 }
