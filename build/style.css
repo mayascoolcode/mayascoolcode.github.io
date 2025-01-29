@@ -12,10 +12,10 @@
 :root {
     --bg:#000;
     --fg:#ffffe2;
-    --color:#da541b;
-    --light:#fdb851;
+    --color:#d8551e;
+    --light:#dfa645;
     --dim:#444649;
-    --trans:#560a0248;
+    --trans:#ef883921;
 }
 
 /* font */
@@ -59,7 +59,7 @@ body {
     --size:clamp(0.6rem, 0.7vw, 0.8vw);
     padding: 1rem;
     font-size: var(--size);
-    line-height: 1.5;
+    line-height: 1.7;
 }
 header, nav, aside, main, footer {
     height: fit-content;
