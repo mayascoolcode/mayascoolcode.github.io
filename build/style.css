@@ -183,14 +183,12 @@ strong, a {
     }
 }
 .big-link {
-    padding: 0.5rem;
+    padding: 0.3rem;
     margin: 1rem;
-    display: flex;
     background: var(--color);
     width: 250px;
-    justify-content: space-between;
-    align-items: center;
     font-weight: bolder;
+    letter-spacing: 5px;
     border: 1px outset var(--light);
     & a {
         color: var(--fg);
@@ -341,7 +339,7 @@ button:hover {
 }
 .big-link:hover {
     background: var(--light);
-    border-color: var(--color);
+    border: 1px inset var(--color);
     & a {
         color: var(--color);
     }
