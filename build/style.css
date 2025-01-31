@@ -56,7 +56,7 @@ html {
     background-color: var(--bg);
 }
 body {
-    --size:clamp(0.6rem, 0.7vw, 0.8vw);
+    --size:clamp(0.55rem, 0.65vw, 0.75vw);
     padding: 1rem;
     font-size: var(--size);
     line-height: 1.7;
