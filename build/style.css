@@ -59,7 +59,7 @@ body {
     --size:clamp(0.55rem, 0.65vw, 0.75vw);
     padding: 1rem;
     font-size: var(--size);
-    line-height: 1.7;
+    line-height: 1.8;
 }
 header, nav, aside, main, footer {
     height: fit-content;
@@ -206,7 +206,7 @@ strong, a {
 #navIndex {
     margin-bottom: auto;
     margin-right: auto;
-    max-width: 210px;
+    max-width: 215px;
     gap: 0.5rem;
     grid-template-columns: repeat(2, minmax(0, 170px));
 }
