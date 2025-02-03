@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0">
 <channel>
-    <title>Maya's Dungeon RSS</title>
-    <description>Updates from the dungeon...</description>
-    <link>https://mayasdungeon.com</link>
-    <lastBuildDate>
-        Sun, 22 Dec 2024 19:56:52 +0000
-    </lastBuildDate>
+    <title>Maya's Dungeon</title>
+    <description>Updates fron the dungeon!</description>
+    <link>https://mayasdungeon.com/</link>
+    <lastBuildDate>Mon, 03 Feb 2025 21:00:20 +0000</lastBuildDate>
     <ttl>20000</ttl>
+    <!-- 2/2/25 -->
+    <item>
+        <title>Welcome!</title>
+        <description>
+            &lt;p&gt;Welcome to the first entry in the RSS Feed. Here, updates are listed as well as links for each updates. Will update on Sundays, same as site updates.&lt;/p&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;https://mayasdungeon.com/pages/collection/&quot;&gt;Added more to the site collection page.&lt;/a&gt;&lt;/l1&gt;
+                &lt;li&gt;&lt;a href=&quot;https://mayasdungeon.com/pages/journal/&quot;&gt;New journal entry.&lt;/a&gt;&lt;/l1&gt;
+            &lt;/ul&gt;
+        </description>
+        <link>https://mayasdungeon.com/pages/collection/</link>
+        <pubDate>Mon, 03 Feb 2025 21:01:23 +0000</pubDate>
+    </item>
+    <!-- END -->
 </channel>
 </rss>
