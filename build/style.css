@@ -183,16 +183,13 @@ strong, a {
     }
 }
 .big-link {
-    padding: 0.3rem;
-    margin: 1rem;
-    background: var(--color);
-    width: 250px;
-    font-weight: bolder;
-    letter-spacing: 5px;
+    color: var(--fg);
     border: 1px outset var(--light);
-    & a {
-        color: var(--fg);
-    }
+    background: var(--color);
+    padding: 0.3rem 0.5rem;
+    margin: 0.5rem;
+    display: block;
+    font-weight: bolder;
 }
 
 /* ids */
@@ -217,9 +214,9 @@ strong, a {
     margin-left: auto;
 }
 #bodyAbout {
-    text-align: center;
     justify-content: center;
     align-content: center;
+    text-align: center;
 }
 #mainAbout {
     max-width: 700px;
@@ -340,7 +337,5 @@ button:hover {
 .big-link:hover {
     background: var(--light);
     border: 1px inset var(--color);
-    & a {
-        color: var(--color);
-    }
+    color: var(--color);
 }
