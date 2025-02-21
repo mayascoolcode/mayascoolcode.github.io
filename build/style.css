@@ -221,6 +221,7 @@ strong, a {
     line-height: 2.4;
 }
 #socialsAbout {
+    margin: 0.5rem;
     justify-content: center;
 }
 #mainAbout {
