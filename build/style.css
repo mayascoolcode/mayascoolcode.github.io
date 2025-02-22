@@ -262,6 +262,9 @@ strong, a {
     gap: 1.3rem;
     text-transform: uppercase;
 }
+#selfinsertwebring {
+    filter: grayscale(100%) contrast(1.5);
+}
 #bodyDirectory {
     font-size: calc(var(--size)*2.3);
 }

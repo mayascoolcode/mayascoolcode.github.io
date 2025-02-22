@@ -8,20 +8,21 @@
     <title>mmmd | collection </title>
 </head>
 <body>
-    <nav id="navShrines" class="flex">
+    <nav id="navShrines" class="flex big">
         <ul class="flex listgroup" id="navlistShrines">
             <li><input type="checkbox" name="gifs" id="" onclick="showSHRINE('gifShrine', this)"> <label for="gifs">Gifs</label></li>
             <li><input type="checkbox" name="dividers" id="" onclick="showSHRINE('dividerShrine', this)"> <label for="dividers">Dividers</label></li>
             <li><input type="checkbox" name="blinkies" id="" onclick="showSHRINE('blinkieShrine', this)"> <label for="blinkies">Blinkies</label></li>
             <li><input type="checkbox" name="buttons" id="" onclick="showSHRINE('buttonShrine', this)"> <label for="buttons">Buttons</label></li>
             <li><input type="checkbox" name="stamp" id="" onclick="showSHRINE('stampShrine', this)"> <label for="stamps">Stamps</label></li>
+            <li><input type="checkbox" name="badges" id="" onclick="showSHRINE('badgesShrine', this)"> <label for="badges">Badges</label></li>
             <li><input type="checkbox" name="sites" id="" onclick="showSHRINE('siteShrine', this)"> <label for="sites">Sites</label></li>
         </ul>
         <img src="/content/icons/candle.png" alt="Shrine image" style="max-width: 50px;" class="icon">
     </nav>
     <hr>
     <!-- MAIN -->
-    <main class="big">
+    <main class="bigger">
         <p><strong>Select something...</strong></p>
         <br>
         <section id="gifShrine" class="hide">
@@ -76,6 +77,14 @@
             <img src="/content/stamps/tism.png" alt="">
             <br><br>
         </section>
+        <section id="badgesShrine" class="hide">
+            <!--START OF SELF INSERT WEBRING-->
+			<div id="selfinsertwebring">
+                <script src="showWebring.js"></script>
+            </div>
+			<!--END OF SELF INSERT WEBRING-->
+            <br><br>
+        </section>
         <section id="siteShrine" class="hide">
             <p>EDU/READING MATERIAL</p>
             <a href="https://fabsocialism.com/" target="_blank" rel="noopener noreferrer">fabsocialism</a>
@@ -88,10 +97,6 @@
             <p>TOOLS</p>       
             <a href="https://timestampgenerator.com/" target="_blank" rel="noopener noreferrer">timestap gen</a>
             <a href="https://www.freeformatter.com/html-escape.html" target="_blank" rel="noopener noreferrer">free formatter</a>
-            <!-- <a href="" target="_blank" rel="noopener noreferrer">link</a> -->
-            <!-- <a href="" target="_blank" rel="noopener noreferrer">link</a> -->
-            <!-- <a href="" target="_blank" rel="noopener noreferrer">link</a> -->
-            <!-- <a href="" target="_blank" rel="noopener noreferrer">link</a> -->
             <!-- <a href="" target="_blank" rel="noopener noreferrer">link</a> -->
             <br>
             <p>COOL INDIE SITES</p>
@@ -108,4 +113,14 @@
     </main>
     <div class="return"><a href="/"><img src="/content/assets/sigil.png" alt=""></a></div>
 </body>
+<script>           
+    var nameSelfWebring = "this webmaster";
+    var relationshipSelfWebring = "wants to cuddle with";
+    var charnameSelfWebring = "shigaraki";
+    var seriesSelfWebring = "boku no hero academia";
+    var imgurlSelfWebring = "https://mayasdungeon.com/content/icons/shiggy-webring.png";
+    var templateWebring = document.createElement("selfinsertwebring");
+    templateWebring.innerHTML = "<style> #templateWebring a {color: #BF3C8E; font-weight:bold} #templateWebring a:hover{font-weight:bold; color:#A43379}  #templateWebring {width:300px !important; text-align:center !important; height:164px !important; border:2px solid #DD28A7 !important; margin: auto !important; background-image:url('https://webring.koinuko.pink/img/bg.png'); background-size:cover} #webringiconbox {border:2px solid #DD28A7 !important; position:relative !important; overflow:hidden !important;   height:100px !important; width:100px !important; left:8px !important; padding:0px !important; margin:0px !important; margin-top:8px !important; box-sizing:content-box !important; max-width:100% !important; justify-content:start !important; display:block !important; clear:none !important } #iconWebring {width:100px !important; overflow:hidden !important; height:100px !important; margin:0px !important; padding:0px !important; box-sizing:content-box !important} #webringdescbox {width:166px !important; height:100px !important; margin-left:122px !important; margin-top:-102px !important; border:1px dashed #DD28A7 !important} #webringdesc{line-height: normal !important; font-weight:normal !important; padding:2px !important; width:160px !important; color:#452134 !important; font-family:Verdana !important; font-size:small !important; margin:auto !important; text-align:center !important; position:relative !important; top:50% !important;  -ms-transform: translateY(-50%) !important; -webkit-transform: translateY(-50%) !important; transform: translateY(-50%) !important;} #webringlinks {line-height:normal !important; font-weight:normal !important; width:278px !important; margin:auto !important; height:38px !important; margin-top:6px !important; border:1px dashed #DD28A7 !important} #linkparaWebring {font-family:Verdana !important; color:#452134 !important; font-size:small !important; 	margin:auto !important; line-height: normal !important; text-align:center !important;	margin-top:3px !important; padding:0px !important} </style> <div id='templateWebring'> <div id='webringiconbox'> <img id='iconWebring' src='" + imgurlSelfWebring + "'/> </div> <div id='webringdescbox'> <p id='webringdesc'> <strong>" + nameSelfWebring + "</strong> " + relationshipSelfWebring + "<br /> <strong>" + charnameSelfWebring + "</strong> from <strong>" + seriesSelfWebring + "</strong>! </p> </div> <div id='webringlinks'>	<p id='linkparaWebring'> | <a href='https://webring.koinuko.pink/members.php' target='_PARENT'>Members List</a> | <br/>	Part of the <a href='https://webring.koinuko.pink/members.php' target='_PARENT'>Self-Insert Webring</a></p> </div> </div>"; 
+    document.getElementById("selfinsertwebring").appendChild(templateWebring);  
+</script>
 </html>
