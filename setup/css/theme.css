@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    cursor: crosshair;
+}
+html {
+    color: var(--fg);
+    background-color: var(--bg);
+    font-size: var(--size);
+    font-family: "Arial";
+}
+html::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    z-index: 20;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+}
+html::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 20;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+body, header, nav, aside, main, footer, section {
+    padding: 0.5rem;
+}
+h1, h2, h3 {
+    letter-spacing: 2px;
+}
+small {
+    color: var(--dim);
+}
+button {
+    border: none;
+    color: var(--fg);
+    background: none;
+    padding: 0 1rem;
+    font-family: "Times";
+}
+button:hover {
+    color: var(--secondary);
+}
+audio{
+    color-scheme: dark;
+}
+audio::-webkit-media-controls-panel {
+    background: var(--bg);
+    border-radius: 10px;
+}
+mark {
+    background: var(--tertiary);
+}
+hr {
+    border: none;
+    border-bottom: 1px dotted var(--dim);
+    margin: 0.5rem 0;
+}
+a {
+    color: var(--primary);
+}
+a:hover {
+  color: var(--secondary);
+}
+
+.container {
+    height: fit-content;
+}
+.gap {
+    gap: 1rem;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.listgroup {
+    list-style: none;
+    padding-left: 0;
+}
+.center {
+    text-align: center;
+}
+.full {
+    height: 100dvh;
+}
+.space {
+    justify-content: space-between;
+}
+.image_bg {
+    background: url("/content/assets/bg.gif");
+}
+.gif_bg {
+    background: url("/content/assets/move_bg.png");
+    animation: background 12s infinite linear;
+}
+.right {
+    text-align: right;
+}
+.green-text {
+    color: var(--primary);
+}
+.return {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    filter: brightness(30%);
+}
+.return:hover {
+    animation: brighten 1s forwards;
+}
+.icon {
+    filter: grayscale(100%) contrast(1.5);
+    max-width: 90px;
+}
+.blackletter {
+    font-family: "Blackletter";
+}
+.acidic {
+    font-family: "Acidic";
+}
+.times {
+    font-family: 'Times New Roman';
+}
+.hide {
+    display: none;
+}
+
+
+
+:root {
+    --fg:#eee;
+    --bg:black;
+    --dim:#292919;
+    --primary:#86862d;
+    --secondary:#bdbf09;
+    --tertiary:#daf39f;
+    --film:#98be3f1e;
+    --trans:#86862d00;
+    --size:clamp(1rem, 1dvw, 1dvw);
+}
+::selection {
+    color: var(--bg);
+    background-color: var(--fg);
+}
+::-webkit-scrollbar {
+    width: 1px;
+}
+::-webkit-scrollbar-track {
+    background: var(--fg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+}
+
+
+@font-face {
+    font-family: "Blackletter";
+    src: url("/content/fonts/BLACEB__.TTF");
+}
+@font-face {
+    font-family: "Acidic";
+    src: url("/content/fonts/Acidic.TTF");
+}
+
+@keyframes flicker {
+    0% {opacity: 0.27861;}
+    5% {opacity: 0.34769;}
+    10% {opacity: 0.23604;}
+    15% {opacity: 0.90626;}
+    20% {opacity: 0.18128;}
+    25% {opacity: 0.83891;}
+    30% {opacity: 0.65583;}
+    35% {opacity: 0.67807;}
+    40% {opacity: 0.26559;}
+    45% {opacity: 0.84693;}
+    50% {opacity: 0.96019;}
+    55% {opacity: 0.08594;}
+    60% {opacity: 0.20313;}
+    65% {opacity: 0.71988;}
+    70% {opacity: 0.53455;}
+    75% {opacity: 0.37288;}
+    80% {opacity: 0.71428;}
+    85% {opacity: 0.70419;}
+    90% {opacity: 0.7003;}
+    95% {opacity: 0.36108;}
+    100% {opacity: 0.24387;}
+}
+@keyframes brighten {
+    to {
+        filter: brightness(100%);
+    }
+}
+@keyframes background {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 307px 133px;
+    }
+}
+@keyframes stretch {
+        to {
+            letter-spacing: 7px;
+        }
+    }

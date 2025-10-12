@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="gif_bg">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/setup/css/theme.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- page -->
+    <script type="module" src="/setup/js/drag_images.js"></script>
+    <title>gallery | M3</title>
+</head>
+<style>
+  body {
+    overflow: hidden;
+  }
+  body {
+      position: relative;
+      height: 100dvh;
+      width: 100vw;
+      min-height: 100vh;
+      min-width: 100vw;
+  }
+  header {
+    justify-content: space-between;
+  }
+  header button {
+    font-size: calc(var(--size)*2);
+    z-index: 45;
+  }
+  main {
+    max-width: 700px;
+    margin: auto;
+  }
+  .photo_video {
+    position: absolute;
+    text-align: center;
+    cursor: grab;
+    z-index: 1;
+    user-select: none;
+    max-width: 200px;
+}
+.photo_video.dragging {
+    z-index: 10;
+    cursor: grabbing;
+}
+.photo_video_title {
+    margin-top: 0.5em;
+    word-break: break-word;
+    pointer-events: none;
+}
+</style>
+<body class="green-text center">
+  <header class="flex">
+    <button onclick="showGallery('photos')">PHOTOS</button>
+    <button onclick="showGallery('videos')">VIDEOS</button>
+  </header>
+  <main>
+    <div id="photos">
+      <div class="photo_video"><img src="/content/photos/key_scale.jpg" alt="key scale"><div class="photo_video_title">key_scale.png</div></div>
+      <div class="photo_video"><img src="/content/photos/my_eye.jpg" alt="my eye"><div class="photo_video_title">my_eye.png</div></div>
+      <div class="photo_video"><img src="/content/photos/kirasfirstvictim.jpg" alt="kirasfirstvictim"><div class="photo_video_title">kirasfirstvictim.png</div></div>
+      <div class="photo_video"><img src="/content/photos/furry_yaoi.jpg" alt="furry yaoi"><div class="photo_video_title">furry_yaoi.png</div></div>
+      <div class="photo_video"><img src="/content/photos/gay_niggas.jpg" alt="gay niggas"><div class="photo_video_title">gay_niggas.png</div></div>
+      <div class="photo_video"><img src="/content/photos/kitty_baby.jpg" alt="kitty_baby"><div class="photo_video_title">kitty_baby.png</div></div>
+      <div class="photo_video"><img src="/content/photos/motivation.JPG" alt="motivation"><div class="photo_video_title">motivation.png</div></div>
+    </div>
+    <div id="videos" style="display: none;">
+      <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/fvsnm-QJiUU?si=jNij7CydPdpD-QLn" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    </div>
+  </main>
+  <!-- return -->
+  <div class="return"><a href="/pages/home/"><img src="/content/gifs/back.gif" alt=""></a></div>
+  <!-- scripts -->
+  <script type="module" src="/setup/js/drag_images.js"></script>
+  <script type="module" src="/setup/js/photos_videos.js"></script>
+</body>
+</html>

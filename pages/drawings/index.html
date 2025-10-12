@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" class="gif_bg">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/setup/css/theme.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- page -->
+    <title>drawings | M3</title>
+</head>
+<style>
+    nav {
+        padding-top: 1rem;
+    }
+    nav menu {
+        justify-content: center;
+    }
+    nav menu button {
+        font-size: calc(var(--size)*1.2);
+        display: block;
+    }
+    main {
+        margin:0 auto;
+        max-width: 1200px;
+    }
+    .drawing_year {
+        column-count: 3;
+        gap: 1.5rem;
+        max-width: 1200px;
+    }
+    .drawimg {
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+    .drawimg img {
+        width: 100%;
+        border-radius: 3.5px;
+        box-shadow: 0 2px 8px var(--dim);
+    }
+    @media (max-width: 900px) {
+        .drawing_year { 
+            column-count: 2; 
+        }
+    }
+    @media (max-width: 600px) {
+        .drawing_year { 
+            column-count: 1; 
+        }
+    }
+</style>
+<body>
+    <header class="center">
+        <a href="/pages/works/">back</a>
+        <nav>
+            <menu class="flex gap">
+                <!-- <button data-year="2025">2025</button> -->
+            </menu>
+        </nav>
+    </header>
+    <main>
+        <div class="drawing_year" data-year="2025"> 
+            <div class="drawimg"><img src="/content/drawings/SP_2025.png" alt="SELF PORTRAIT"></div>
+        </div>
+    </main>
+    <!-- scripts -->
+    <script type="module" src="/setup/js/tabs.js"></script>
+</body>
+</html>

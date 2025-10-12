@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/setup/css/theme.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- page -->
+    <title>home | M3</title>
+</head>
+<style>
+    body {
+        width: 1200px;
+    }
+    header {
+        align-items: center;
+        justify-content: space-between;
+    }
+    #title {
+        font-family: "Blackletter";
+        letter-spacing: 5px;
+        font-size: calc(var(--size)*3);
+        -webkit-text-stroke: 0.4px var(--fg);
+        color: var(--bg);
+    }
+    #logo {
+        max-width: 100px;
+    }
+    nav {
+        flex: 20%;
+        font-size: calc(var(--size)*1.5);
+        font-family: "Acidic";
+        line-height: 1.5;
+        font-style: italic;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+    }
+    nav a {
+        text-decoration: none;
+    }
+    #mainContent {
+        flex: 80%;
+    }
+    main {
+        flex: 70%;
+    }
+    #updateBox {
+        border: 1px solid;
+        padding: 0.4rem;
+        height: 150px;
+        overflow-y: auto;
+    }
+    aside {
+        flex: 30%;
+    }
+    #pet {
+        max-width: 60px;
+    }
+    #snack {
+        max-width: 160px;
+    }
+    footer {
+        text-align: center;
+    }
+    #linklist {
+        line-height: 1.2;
+        text-align: left;
+    }
+    #linklist a {
+        text-decoration: none;
+    }
+    .icon {
+        text-align: center;
+    }
+
+@media screen and (max-width:600px) {
+    .container, #mainContent {
+        flex-direction: column;
+    }
+    nav {
+        font-size: calc(var(--size)*1);
+    }
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    
+}
+</style>
+<body>
+    <header class="flex">
+        <h1 id="title">M3</h1>
+        <a href="/"><img src="/content/assets/sigil_white.png" alt="logo image" id="logo"></a>
+    </header>
+    <div class="flex container">
+        <nav>
+            <ul class="listgroup">
+                <li><a href="/pages/about/">About</a></li>
+                <li><a href="/pages/diary/">Diary</a></li>
+                <li><a href="/pages/gallery/">Gallery</a></li>
+                <li><a href="/pages/works/">Works</a></li>
+                <li><a href="/pages/sitemap/">Sitemap</a></li>
+            </ul>
+        </nav>
+        <div class="flex" id="mainContent">
+            <main>
+                <section class="center">
+                    <img src="/content/assets/mirror.png" alt="" class="icon">
+                    <p>Welcome to <i>MayasDungeon.com</i>, a virtual playroom. It is a safe space for experimenting.</p>
+                    <br><p><i>Updates every Sunday. Bookmark me! <img src="/content/gifs/bear.gif" alt=""></i></p><br>
+                    <!-- FC2 Counter  Starts here -->
+                    <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=40502263&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=40502263&main=1" /></noscript>
+                    <!-- FC2 Counter  Ends here -->
+                </section>
+            </main>
+            <aside>
+                <!-- photos, image -->
+                <section class="center">
+                    <img src="/content/assets/me_2.png" alt="" id="me">
+                    <img src="/content/gifs/tea.gif" alt="" id="pet">
+                    <br>
+                </section>
+                <!-- buttons -->
+                <section class="center">
+                    <img src="/content/buttons/angel.gif" alt="">
+                    <img src="/content/buttons/css.gif" alt="">
+                    <img src="/content/buttons/winamp.gif" alt="">
+                    <img src="/content/buttons/69freeware.gif" alt="">
+                    <img src="/content/buttons/anarchy-now.gif" alt="">
+                    <img src="/content/buttons/cogs.gif" alt="">
+                    <img src="/content/buttons/anime_glam_fantasydreamsbanner.jpg" alt="">
+                    <br>
+                    <p>(<a href="/pages/stuff/">more</a>)</p>
+                </section>
+                <!-- pancakes -->
+                <section class="center">
+                    <p>snack time :3</p>
+                    <img src="/content/gifs/pancake.gif" alt="" id="snack">
+                </section>    
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
