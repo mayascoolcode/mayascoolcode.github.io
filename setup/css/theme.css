@@ -114,6 +114,12 @@ a:hover {
 }
 .green-text {
     color: var(--primary);
+    & a {
+        color: var(--tertiary);
+        font-style: italic;
+        text-decoration: none;
+
+    }
 }
 .return {
     position: fixed;
