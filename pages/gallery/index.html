@@ -1,57 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" class="gif_bg">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/setup/css/theme.css">
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="drag_images.js"></script>
+    <script type="module" src="photos_videos.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- page -->
-    <script type="module" src="/setup/js/drag_images.js"></script>
-    <title>gallery | MM</title>
+    <title>gallery | ཐིཋྀ</title>
 </head>
-<style>
-  body {
-    overflow: hidden;
-  }
-  body {
-      position: relative;
-      height: 100dvh;
-      width: 100vw;
-      min-height: 100vh;
-      min-width: 100vw;
-  }
-  header {
-    justify-content: space-between;
-  }
-  header button {
-    font-size: calc(var(--size)*2);
-    z-index: 45;
-  }
-  main {
-    max-width: 700px;
-    margin: auto;
-  }
-  .photo_video {
-    position: absolute;
-    text-align: center;
-    cursor: grab;
-    z-index: 1;
-    user-select: none;
-    max-width: 200px;
-}
-.photo_video.dragging {
-    z-index: 10;
-    cursor: grabbing;
-}
-.photo_video_title {
-    margin-top: 0.5em;
-    word-break: break-word;
-    pointer-events: none;
-}
-</style>
-<body class="green-text center">
-  <header class="flex">
-    <button onclick="showGallery('photos')">PHOTOS</button>
-    <button onclick="showGallery('videos')">VIDEOS</button>
+<body id="bodyGALLERY">
+  <header class="flex" id="headerGALLERY">
+      <button class="big_button" onclick="showGallery('photos')">PHOTOS</button>
+      <button class="big_button" onclick="showGallery('videos')">VIDEOS</button>
   </header>
   <main>
     <div id="photos">
@@ -68,9 +28,6 @@
     </div>
   </main>
   <!-- return -->
-  <div class="return"><a href="/pages/home/"><img src="/content/gifs/back.gif" alt=""></a></div>
-  <!-- scripts -->
-  <script type="module" src="/setup/js/drag_images.js"></script>
-  <script type="module" src="/setup/js/photos_videos.js"></script>
+  <div class="return"><a href="/"><img src="/content/gifs/back.gif" alt=""></a></div>
 </body>
 </html>

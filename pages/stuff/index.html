@@ -1,32 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" class="gif_bg">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/setup/css/theme.css">
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="select_thing.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- page files -->
-    <title>stuff | MM</title>
+    <title>stuff | ཐིཋྀ</title>
 </head>
-<style>
-    header {
-        justify-content: space-between;
-        align-items: center;
-    }
-    nav button {
-        font-size: calc(var(--size)*1.2);
-    }
-    main {
-        padding-top: 2rem;
-    }
-    main div {
-        padding: 1rem;
-    }
-</style>
 <body>
-    <header class="flex">
+    <header class="flex" id="headerSTUFF">
         <img src="/content/assets/candle.png" alt="" class="icon">
-        <nav>
-            <ul class="flex listgroup">
+        <nav id="navSTUFF">
+            <ul class="flex group">
                 <li><button data-target="buttonStuff">buttons</button></li>
                 <li><button data-target="blinkieStuff">blinkies</button></li>
                 <li><button data-target="badgeStuff">badges</button></li>
@@ -35,7 +20,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="mainSTUFF">
         <div id="buttonStuff" style="display: none;">
             <img src="/content/buttons/angel.gif" alt="">
             <img src="/content/buttons/css.gif" alt="">
@@ -80,9 +65,7 @@
             <img src="/content/stamps/uzimaki.png" alt="">
         </div>
     </main>
-    <!-- scripts -->
-    <script type="module" src="/setup/js/select_thing.js"></script>
     <!-- return -->
-    <div class="return"><a href="/pages/home/"><img src="/content/gifs/back.gif" alt=""></a></div>
+    <div class="return"><a href="/"><img src="/content/gifs/back.gif" alt=""></a></div>
 </body>
 </html>
