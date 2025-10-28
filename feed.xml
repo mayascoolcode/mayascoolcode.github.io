@@ -8,6 +8,12 @@
 <ttl>20000</ttl>
 <item>
     <title>Welcome to MayasDungeon.com</title>
+    <description>NEW: diary entry, painting</description>
+    <link>https://mayasdungeon.com/pages/home</link>
+    <pubDate>Sun, 26 Oct 25 23:16:55 +0000</pubDate>
+</item>
+<item>
+    <title>Welcome to MayasDungeon.com</title>
     <description>The website RSS feed has been made.</description>
     <link>https://mayasdungeon.com/pages/home</link>
     <pubDate>Sun, 19 Oct 25 23:16:55 +0000</pubDate>
