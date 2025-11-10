@@ -2,7 +2,7 @@
     --fg: #eee;
     --bg: black;
     --dim: #292919;
-    --light: #5a5a5a;
+    --color: #939080;
     --trans: #86862d00;
     --size: clamp(0.8rem, 0.8dvw, 0.8dvw);
 }
@@ -77,7 +77,7 @@ audio {
 }
 
 mark {
-    background: var(--light);
+    background: var(--color);
 }
 
 hr {
@@ -87,11 +87,11 @@ hr {
 }
 
 i {
-    color: var(--light);
+    color: var(--color);
 }
 
 a {
-    color: var(--light);
+    color: var(--color);
     font-family: "MS UI GOTHIC";
 }
 
@@ -286,7 +286,7 @@ a {
     width: 100vw;
     min-height: 100vh;
     min-width: 100vw;
-    color: var(--light);
+    color: var(--color);
 }
 
 #headerGALLERY {
@@ -469,7 +469,7 @@ audio::-webkit-media-controls-panel {
 
 #bodyWORKS a:hover {
     color: var(--trans);
-    -webkit-text-stroke: 0.5px var(--light);
+    -webkit-text-stroke: 0.5px var(--color);
     font-style: italic;
     animation: stretch 1s forwards;
 }
