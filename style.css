@@ -2,10 +2,7 @@
     --fg: #eee;
     --bg: black;
     --dim: #292919;
-    --primary: #86862d;
-    --secondary: #bdbf09;
-    --tertiary: #fdf6b6;
-    --film: #98be3f1e;
+    --light: #5a5a5a;
     --trans: #86862d00;
     --size: clamp(0.8rem, 0.8dvw, 0.8dvw);
 }
@@ -14,17 +11,14 @@
     color: var(--bg);
     background-color: var(--fg);
 }
-
 ::-webkit-scrollbar {
-    width: 1px;
+    width: 5px;
 }
-
 ::-webkit-scrollbar-track {
     background: var(--fg);
 }
-
 ::-webkit-scrollbar-thumb {
-    background: var(--primary);
+    background: var(--fg);
 }
 
 
@@ -44,7 +38,8 @@ html {
     background-color: var(--bg);
     font-size: var(--size);
     font-family: "Arial";
-    line-height: 1.5;
+    line-height: 1.7;
+    letter-spacing: 1px;
     background-image: url("/content/assets/move_bg.png");
     animation: background 12s infinite linear;
 }
@@ -82,7 +77,7 @@ audio {
 }
 
 mark {
-    background: var(--tertiary);
+    background: var(--light);
 }
 
 hr {
@@ -92,11 +87,11 @@ hr {
 }
 
 i {
-    color: var(--primary);
+    color: var(--light);
 }
 
 a {
-    color: var(--primary);
+    color: var(--light);
     font-family: "MS UI GOTHIC";
 }
 
@@ -291,7 +286,7 @@ a {
     width: 100vw;
     min-height: 100vh;
     min-width: 100vw;
-    color: var(--primary);
+    color: var(--light);
 }
 
 #headerGALLERY {
@@ -454,13 +449,6 @@ a {
 
 
 
-a:hover {
-    color: var(--secondary);
-}
-
-button:hover {
-    color: var(--secondary);
-}
 
 audio::-webkit-media-controls-panel {
     background: var(--bg);
@@ -481,7 +469,7 @@ audio::-webkit-media-controls-panel {
 
 #bodyWORKS a:hover {
     color: var(--trans);
-    -webkit-text-stroke: 0.5px var(--primary);
+    -webkit-text-stroke: 0.5px var(--light);
     font-style: italic;
     animation: stretch 1s forwards;
 }
