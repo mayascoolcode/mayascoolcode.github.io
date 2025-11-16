@@ -8,6 +8,18 @@
 <ttl>20000</ttl>
 <item>
     <title>Welcome to MayasDungeon.com</title>
+    <description>NEW: diary entry</description>
+    <link>https://mayasdungeon.com/pages/home</link>
+    <pubDate>Sun, 16 Nov 25 23:16:55 +0000</pubDate>
+</item>
+<item>
+    <title>Welcome to MayasDungeon.com</title>
+    <description>NEW: diary entry, gallery</description>
+    <link>https://mayasdungeon.com/pages/home</link>
+    <pubDate>Sun, 09 Nov 25 23:16:55 +0000</pubDate>
+</item>
+<item>
+    <title>Welcome to MayasDungeon.com</title>
     <description>NEW: diary entry, painting</description>
     <link>https://mayasdungeon.com/pages/home</link>
     <pubDate>Sun, 26 Oct 25 23:16:55 +0000</pubDate>
