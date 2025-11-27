@@ -3,32 +3,14 @@
 <channel>
 <title>The Dungeon RSS</title>
 <description>Updates from the dungeon.</description>
-<link>https://mayasdungeon.com/</link>
-<lastBuildDate>Sun, 19 Oct 25 23:16:55 +0000</lastBuildDate>
+<link>https://mmdungeon.xyz/</link>
+<lastBuildDate>Sat, 22 Nov 25 23:16:55 +0000</lastBuildDate>
 <ttl>20000</ttl>
 <item>
-    <title>Welcome to MayasDungeon.com</title>
-    <description>NEW: diary entry</description>
-    <link>https://mayasdungeon.com/pages/home</link>
-    <pubDate>Sun, 16 Nov 25 23:16:55 +0000</pubDate>
-</item>
-<item>
-    <title>Welcome to MayasDungeon.com</title>
-    <description>NEW: diary entry, gallery</description>
-    <link>https://mayasdungeon.com/pages/home</link>
-    <pubDate>Sun, 09 Nov 25 23:16:55 +0000</pubDate>
-</item>
-<item>
-    <title>Welcome to MayasDungeon.com</title>
-    <description>NEW: diary entry, painting</description>
-    <link>https://mayasdungeon.com/pages/home</link>
-    <pubDate>Sun, 26 Oct 25 23:16:55 +0000</pubDate>
-</item>
-<item>
-    <title>Welcome to MayasDungeon.com</title>
+    <title>Welcome to MMDungeon.com</title>
     <description>The website RSS feed has been made.</description>
-    <link>https://mayasdungeon.com/pages/home</link>
-    <pubDate>Sun, 19 Oct 25 23:16:55 +0000</pubDate>
+    <link>https://mmdungeon.xyz/pages/home/</link>
+    <pubDate>Sat, 22 Nov 25 23:16:55 +0000</pubDate>
 </item>
 </channel>
 </rss>
