@@ -7,9 +7,15 @@
 <lastBuildDate>Sat, 22 Nov 25 23:16:55 +0000</lastBuildDate>
 <ttl>20000</ttl>
 <item>
+    <title>Nov 29</title>
+    <description>NEW: journal entry, updated about page, updated links</description>
+    <link>https://mmdungeon.xyz/pages/journal/</link>
+    <pubDate>Sat, 29 Nov 25 23:16:55 +0000</pubDate>
+</item>
+<item>
     <title>Welcome to MMDungeon.com</title>
     <description>The website RSS feed has been made.</description>
-    <link>https://mmdungeon.xyz/pages/home/</link>
+    <link>https://mmdungeon.xyz/</link>
     <pubDate>Sat, 22 Nov 25 23:16:55 +0000</pubDate>
 </item>
 </channel>
