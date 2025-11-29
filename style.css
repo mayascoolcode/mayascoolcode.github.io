@@ -1,8 +1,8 @@
 :root {
-    --fg: #eee;
-    --bg: black;
+    --light: #b6ae95;
+    --med: #887f70;
     --dim: #292919;
-    --color: #939080;
+    --bg: black;
     --trans: #86862d00;
     --size: clamp(0.8rem, 0.8dvw, 0.8dvw);
 }
@@ -13,7 +13,7 @@
 
 ::selection {
     color: var(--bg);
-    background-color: var(--fg);
+    background-color: var(--light);
 }
 
 ::-webkit-scrollbar {
@@ -21,11 +21,11 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--fg);
+    background: var(--light);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--fg);
+    background: var(--light);
 }
 
 
@@ -41,7 +41,7 @@
 }
 
 html {
-    color: var(--fg);
+    color: var(--light);
     background-color: var(--bg);
     font-size: var(--size);
     font-family: "Arial";
@@ -73,7 +73,7 @@ small {
 
 button {
     border: none;
-    color: var(--fg);
+    color: var(--light);
     background: none;
     padding: 0 1rem;
     font-family: "Times";
@@ -84,7 +84,7 @@ audio {
 }
 
 mark {
-    background: var(--color);
+    background: var(--med);
 }
 
 hr {
@@ -94,11 +94,11 @@ hr {
 }
 
 i {
-    color: var(--color);
+    color: var(--med);
 }
 
 a {
-    color: var(--color);
+    color: var(--med);
     font-family: "MS UI GOTHIC";
 }
 
@@ -217,14 +217,13 @@ a {
 
 .page {
     max-width: 55px;
-
     & img {
-        filter: contrast(1.5) brightness(2) grayscale(100%);
+        filter: contrast(1.5) brightness(2) grayscale(50%);
     }
 }
 
 .icon {
-    filter: contrast(1.5) grayscale(100%);
+    filter: contrast(1.5) grayscale(50%);
     max-width: 100px;
 }
 
@@ -294,7 +293,7 @@ a {
     width: 100vw;
     min-height: 100vh;
     min-width: 100vw;
-    color: var(--color);
+    color: var(--med);
 }
 
 #gallery header {
@@ -471,12 +470,12 @@ audio::-webkit-media-controls-panel {
 }
 
 #sitemap a:hover {
-    background: var(--fg);
+    background: var(--light);
 }
 
 #works a:hover {
     color: var(--trans);
-    -webkit-text-stroke: 0.5px var(--color);
+    -webkit-text-stroke: 0.5px var(--med);
     font-style: italic;
     animation: stretch 1s forwards;
 }
