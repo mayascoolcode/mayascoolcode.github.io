@@ -218,12 +218,12 @@ a {
 .page {
     max-width: 55px;
     & img {
-        filter: contrast(1.5) brightness(2) grayscale(50%);
+        filter: contrast(1.5) brightness(2) grayscale(100%);
     }
 }
 
 .icon {
-    filter: contrast(1.5) grayscale(50%);
+    filter: contrast(1.5) grayscale(100%);
     max-width: 100px;
 }
 
