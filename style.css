@@ -35,7 +35,7 @@ html {
     color: var(--dominant);
     background-color: #000;
     font-size: var(--size);
-    line-height: 1.7;
+    line-height: 2;
     letter-spacing: 2px;
     background-image: url("/content/assets/move_bg.png");
     animation: background 12s infinite linear;
