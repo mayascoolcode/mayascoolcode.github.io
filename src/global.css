@@ -1,0 +1,73 @@
+/* Reset */
+
+* {
+    margin: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: '';
+    src: url();
+}
+@font-face {
+    font-family: '';
+    src: url();
+}
+
+/* Variables */
+
+:root {
+    --color10:#000;
+    --color30:#000;
+    --color90:#fff;
+    --color100:#000;
+    --accent:#000;
+    --ff:"sans";
+    --ff2:"sans":
+    --p:1rem:
+    --h1:1rem:
+    --h2:1rem:
+    --spacing1:4px;
+    --spacing2:8px;
+    --spacing3:16px;
+    --spacing4:20px;
+}
+
+/* Elements */
+
+html {
+    scroll-behavior: smooth;
+    background: var(--color90);
+}
+body {
+    text-wrap: balance;
+    font: var(--p);
+    color: var(--color10);
+}
+h1 {
+    font-size: var(--h1);
+}
+h2 {
+    font-size: var(--h2);
+}
+p {
+    margin: var(--spacing2) 0;
+}
+
+
+/* Classes */
+.pageLink {
+    max-width: 100px;
+    border: 1px solid;
+    text-align: center;
+}
+
+/* Animation */
+
+@keyframes bgMove {
+  0% {background-position:0 0;}
+  100% {background-position: 0px 400px;}
+}
