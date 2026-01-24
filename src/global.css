@@ -1,7 +1,6 @@
 /* Reset */
 * {
     margin: 0;
-    max-width: 100%;
     box-sizing: border-box;
 }
 
@@ -11,61 +10,128 @@
     src: url('/src/lib/fonts/jefferson/Jeffrson.ttf');
 }
 @font-face {
-    font-family: 'TtKp';
-    src: url('/src/lib/fonts/tt_kp/TT-KP-ME.TTF');
+    font-family: 'Gabriele';
+    src: url('/src/lib/fonts/gabriele_ribbon_fg/gabriele-l.ttf');
 }
+
 
 /* Variables */
 :root {
-    --color10:#000;
-    --color30:#000;
-    --color90:#fff;
-    --color100:#000;
-    --accent:#000;
+    --dominant:#000;
+    --secondary:#fce5cd;
+    --accent:#b39c6c;
+    --dim:#20261f;
+
     --ff:'Jeffrson';
-    --ff2:'TtKp':
+    --ff2:'Gabriele';
+
     --title:7rem:
     --text:1rem:
     --space-sm:4px;
     --space-md:8px;
-    --space_lg:16px;
+    --space-lg:16px;
 }
 
 /* Elements */
 html {
     scroll-behavior: smooth;
-    background: var(--color90);
+    background: var(--dominant);
+    color: var(--secondary);
+    background-image:url('/static/bg.webp');
+    animation:16s linear infinite moveBg;
 }
 body {
     text-wrap: balance;
-    font: var(--text) var(--ff2);
-    color: var(--color10);
-    line-height: 1.7;
+    font-size: var(--text);
+    font-family: var(--ff2);
+    padding: var(--space-lg);
+    line-height: 1.3;
 }
 header, nav, main, aside, footer {
     padding: var(--space-md);
 }
-p {
-    margin: var(--space-md) 0;
+small {
+    color: var(--accent);
 }
 img {
     width: 100%;
 }
+h1 {
+    font-family: var(--ff);
+}
+h2 {
+    color: var(--accent);
+    font-family: var(--ff2);
+    font-style: italic;
+}
+ul {
+    padding-left: var(--space-md);
+    text-align: left;
+}
+hr {
+    border: none;
+    border: 1px solid var(--dim);
+    margin: 10px auto;
+}
+p {
+    padding: var(--space-md) 0;
+}
+a {
+    color: var(--secondary);
+}
 
 /* Classes */
+
+
 .full {
     height: 100dvh;
 }
 .flex {
     display: flex;
     flex-wrap: wrap;
+    gap: var(--space-lg);
 }
-.title {
-    font-family: var(--ff);
-}
+
 .group {
     list-style: none;
 }
 .center {
     margin: auto;
+}
+.text_center {
+    text-align: center;
+}
+
+
+.between {
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+.back {
+    max-width: 60px;
+    filter: brightness(50%);
+    position: fixed;
+    bottom: var(--space-md);
+    left: var(--space-md);
+}
+
+
+
+
+/* Animation */
+@keyframes moveBg {
+  0% {background-position:0 0;}
+  100% {background-position:400px 400px;}
+}
+
+/* Other */
+a:hover {
+    color: var(--accent);
 }
