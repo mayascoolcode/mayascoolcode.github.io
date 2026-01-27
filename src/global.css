@@ -31,7 +31,7 @@ html {
     scroll-behavior: smooth;
     background: var(--dominant);
     color: var(--secondary);
-    background-image:url('/static/bg.webp');
+    background-image:url('/src/img/bg.webp');
     animation: 16s linear infinite moveBg;
 }
 body {
