@@ -1,10 +1,14 @@
 /* Reset */
 * {
     margin: 0;
+    padding: 0;
+    max-width: 100%;
     box-sizing: border-box;
 }
 
-/* Fonts */
+
+
+/* Variables */
 @font-face {
     font-family: 'Jeffrson';
     src: url('/src/lib/fonts/jefferson/Jeffrson.ttf');
@@ -13,24 +17,14 @@
     font-family: 'Gabriele';
     src: url('/src/lib/fonts/gabriele_ribbon_fg/gabriele-l.ttf');
 }
-
-
-/* Variables */
 :root {
     --dominant:#000;
     --secondary:#fce5cd;
     --accent:#b39c6c;
     --dim:#20261f;
-
-    --ff:'Jeffrson';
-    --ff2:'Gabriele';
-
-    --title:7rem:
-    --text:1rem:
-    --space-sm:4px;
-    --space-md:8px;
-    --space-lg:16px;
 }
+
+
 
 /* Elements */
 html {
@@ -38,90 +32,63 @@ html {
     background: var(--dominant);
     color: var(--secondary);
     background-image:url('/static/bg.webp');
-    animation:16s linear infinite moveBg;
+    animation: 16s linear infinite moveBg;
 }
 body {
-    text-wrap: balance;
-    font-size: var(--text);
-    font-family: var(--ff2);
-    padding: var(--space-lg);
     line-height: 1.3;
-}
-header, nav, main, aside, footer {
-    padding: var(--space-md);
+    text-wrap: balance;
+    font: 0.88rem 'Gabriele';
+    padding: 0.7rem;
 }
 small {
-    color: var(--accent);
+    color: var(--dim);
 }
 img {
     width: 100%;
 }
 h1 {
-    font-family: var(--ff);
+    font-family: 'Jeffrson';
 }
 h2 {
     color: var(--accent);
-    font-family: var(--ff2);
     font-style: italic;
 }
 ul {
-    padding-left: var(--space-md);
     text-align: left;
 }
 hr {
     border: none;
-    border: 1px solid var(--dim);
     margin: 10px auto;
-}
-p {
-    padding: var(--space-md) 0;
+    border: 1px solid var(--dim);
 }
 a {
-    color: var(--secondary);
+    color: var(--accent);
 }
 
+
+
 /* Classes */
-
-
 .full {
     height: 100dvh;
 }
 .flex {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-lg);
 }
-
-.group {
+.list_group {
     list-style: none;
 }
-.center {
-    margin: auto;
-}
-.text_center {
-    text-align: center;
-}
-
-
-.between {
-    justify-content: space-between;
-}
 
 
 
-
-
-
-
-
-.back {
-    max-width: 60px;
-    filter: brightness(50%);
+/* More */
+#copy {
     position: fixed;
-    bottom: var(--space-md);
-    left: var(--space-md);
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 10;
 }
-
 
 
 
@@ -129,9 +96,4 @@ a {
 @keyframes moveBg {
   0% {background-position:0 0;}
   100% {background-position:400px 400px;}
-}
-
-/* Other */
-a:hover {
-    color: var(--accent);
 }
