@@ -1,14 +1,12 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-
 
 /* Variables */
+
+:root {
+    --dominant:#000;
+    --secondary:#fce5cd;
+    --accent:#b39c6c;
+    --dim:#20261f;
+}
 @font-face {
     font-family: 'Jeffrson';
     src: url('/src/lib/fonts/jefferson/Jeffrson.ttf');
@@ -17,16 +15,18 @@
     font-family: 'Gabriele';
     src: url('/src/lib/fonts/gabriele_ribbon_fg/gabriele-l.ttf');
 }
-:root {
-    --dominant:#000;
-    --secondary:#fce5cd;
-    --accent:#b39c6c;
-    --dim:#20261f;
-}
+
 
 
 
 /* Elements */
+
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
 html {
     scroll-behavior: smooth;
     background: var(--dominant);
@@ -36,9 +36,10 @@ html {
 }
 body {
     line-height: 1.3;
+    letter-spacing: 2px;
     text-wrap: balance;
-    font: 0.88rem 'Gabriele';
-    padding: 0.7rem;
+    font: 0.8rem 'Gabriele';
+    padding: 1rem;
 }
 small {
     color: var(--dim);
@@ -68,6 +69,7 @@ a {
 
 
 /* Classes */
+
 .full {
     height: 100dvh;
 }
@@ -82,6 +84,7 @@ a {
 
 
 /* More */
+
 #copy {
     position: fixed;
 	bottom: 0;
@@ -93,6 +96,7 @@ a {
 
 
 /* Animation */
+
 @keyframes moveBg {
   0% {background-position:0 0;}
   100% {background-position:400px 400px;}
