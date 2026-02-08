@@ -19,10 +19,10 @@ h1 {
     @apply text-4xl font-extrabold mb-6;
 }
 h2 {
-    @apply text-3xl font-bold mb-4;
+    @apply text-3xl font-bold mb-4 text-center;
 }
 h3 {
-    @apply text-2xl font-medium mb-2;
+    @apply text-2xl font-medium mb-4;
 }
 p {
     @apply text-base mb-1;

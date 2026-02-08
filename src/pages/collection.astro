@@ -1,16 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ColSection from '../components/_colSection.astro';
 ---
 <Layout title="Collection" description="Mtchtmy's links, resources, homies.">
-	<h2>Collection</h2>
-	<br>
-	<section>
-		<h3>Buttons</h3>
-	</section>
+    <ColSection colTitle='Buttons' colSection="buttons"/>
+    <ColSection colTitle='Blinkies' colSection="blinkies"/>
+    <ColSection colTitle='Stamps' colSection="stamps"/>
+    <ColSection colTitle='Gifs' colSection="gifs"/>
 </Layout>
-
-<style>
-	.button {
-
-	}
-</style>

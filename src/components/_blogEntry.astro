@@ -1,0 +1,32 @@
+---
+interface Props {
+  blogTitle: string;
+  blogDate: string;
+}
+const { blogTitle, blogDate } = Astro.props;
+---
+<div class="blogEntry">
+	<div class="blogTitle">
+        <h3>{blogTitle}</h3>
+        <small>{blogDate}</small>
+    </div>
+    <div class="blogContent">
+		<p><slot /></p>
+    </div>
+</div>
+
+<style>
+	.blogEntry {
+		border: 1px solid;
+		padding: 1rem;
+	}
+	.blogTitle {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid;
+		margin-bottom: 1rem;
+	}
+	.blogContent {
+	}
+</style>
