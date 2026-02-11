@@ -2,13 +2,13 @@
 import { Image } from "astro:assets";
 
 interface Props {
-  colTitle: string;
-  colSection: string;
+  stuffTitle: string;
+  stuffCategory: string;
 }
-const { colTitle, colSection } = Astro.props;
+const { stuffTitle, stuffCategory } = Astro.props;
 
 let items = {};
-switch(colSection) {
+switch(stuffCategory) {
   case 'buttons':     items = import.meta.glob<{ default: ImageMetadata }>("../assets/img/buttons/*", { eager: true }); break;
   case 'stamps':      items = import.meta.glob<{ default: ImageMetadata }>("../assets/img/stamps/*", { eager: true }); break;
   case 'blinkies':    items = import.meta.glob<{ default: ImageMetadata }>("../assets/img/blinkies/*", { eager: true }); break;
@@ -19,19 +19,19 @@ const itemsArray = Object.entries(items).map(([path, module]) => {
   const itemsMod = module as { default: ImageMetadata };
     return {
       src: itemsMod.default, 
-      alt: path.split('/').pop()?.replace(/\.[^/.]+$/, '') || colTitle
+      alt: path.split('/').pop()?.replace(/\.[^/.]+$/, '') ||stuffTitle 
     };
 });
 ---
-<section class="colSection">
-  <h3>{colTitle}</h3>
+<section class="stuffCategory">
+  <h3>{stuffTitle}</h3>
   <div class="flex gap-3 flex-wrap">
     {itemsArray.map((item) => (<Image src={item.src} alt={item.alt} loading="lazy" width={88}/>))}
   </div>
 </section>
 
 <style>
-  .colSection {
+  .stuffCategory {
     border: 1px solid;
     padding: 1rem;
     margin: 1rem 0;
