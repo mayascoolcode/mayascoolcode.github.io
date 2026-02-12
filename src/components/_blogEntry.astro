@@ -5,8 +5,8 @@ interface Props {
 }
 const { blogTitle, blogDate } = Astro.props;
 ---
-<div class="blogEntry">
-	<div class="blogTitle">
+<div class="blogEntry border border-bean text-bean bg-champagne">
+	<div class="blogTitle border-b border-bean">
         <h3>{blogTitle}</h3>
         <small>{blogDate}</small>
     </div>
@@ -17,14 +17,12 @@ const { blogTitle, blogDate } = Astro.props;
 
 <style>
 	.blogEntry {
-		border: 1px solid;
 		padding: 1rem;
 	}
 	.blogTitle {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		border-bottom: 1px solid;
 		margin-bottom: 1rem;
 	}
 	.blogContent {
