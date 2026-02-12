@@ -1,0 +1,79 @@
+/* Import */
+@import "tailwindcss";
+
+/* Font Face */
+@font-face {
+    font-family: 'Rosaline';
+    src: url('/src/assets/fonts/Rosaline_Complete/Fonts/WEB/fonts/Rosaline-Regular.woff');
+}
+@font-face {
+    font-family: 'Gambetta';
+    src: url('/src/assets/fonts/Gambetta_Complete/Gambetta_Complete/Fonts/WEB/fonts/Gambetta-Medium.woff');
+}
+@font-face {
+    font-family: 'Switzer';
+    src: url('/src/assets/fonts/Switzer_Complete/Switzer_Complete/Fonts/WEB/fonts/Switzer-Extralight.woff');
+}
+
+/* Theme */
+@theme {
+    --font-title: "Rosaline";
+    --font-subtitle: "Gambetta";
+    --font-text: 'Switzer';
+
+    --color-espresso: #080808;
+    --color-champagne: #fbf0e3;
+    --color-bean: #554340;
+
+
+}
+
+
+
+
+html {
+    @apply scroll-smooth;
+}
+body {
+    @apply text-base font-text text-champagne bg-espresso;
+} 
+section {
+    @apply py-4;
+}
+main {
+    @apply relative;
+}
+h1 {
+    @apply text-6xl mb-6 font-title;
+}
+h2 {
+    @apply text-4xl mb-4 font-subtitle text-center;
+}
+h3 {
+    @apply text-2xl mb-4 font-subtitle;
+}
+p {
+    @apply text-base mb-1;
+}
+small {
+    @apply text-bean;
+}
+img {
+    @apply p-2;
+}
+
+
+.entry {
+    @apply mb-4 p-4 border shadow;
+}
+.entry_title {
+    @apply mb-2 flex items-center justify-between;
+}
+.entry_date {
+    @apply text-sm text-gray-500;
+}
+.entry_content {
+    @apply text-base;
+}
+
+

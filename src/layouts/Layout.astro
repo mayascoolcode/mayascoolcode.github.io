@@ -1,5 +1,5 @@
 ---
-import '/src/styles/global.css';
+import '/src/global.css';
 import Header from './elements/Header.astro';
 import Aside from './elements/Aside.astro';
 import Main from './elements/Main.astro';
@@ -8,8 +8,9 @@ import Footer from './elements/Footer.astro';
 interface Props {
   title: string;
   description: string;
+  sprite: string;
 }
-const { title, description } = Astro.props;
+const { title, description, sprite } = Astro.props;
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -24,7 +25,7 @@ const { title, description } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="keywords" content="Mtchtmy, mmdungeon" />
 		<!-- Links -->
-		<link rel="icon" type="image/svg+xml" href="/src/assets/img/favicon.gif" />
+		<link rel="icon" type="image/svg+xml" href="/src/assets/img/favicon.ico" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 		<!-- Title -->
 		<title>Mtchtmy | {title}</title>
@@ -36,6 +37,7 @@ const { title, description } = Astro.props;
 			<Main>
 				<h2>{title}</h2>
 				<slot />
+    			<img src={sprite} alt="" class="absolute -bottom-40 -right-30 w-60 md:w-90">
 			</Main>
 		</div>
 		<Footer/>
