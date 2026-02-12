@@ -9,7 +9,7 @@
 
 /* Theme */
 @theme {
-    --font-title: "Rosaline";
+    --font-display: "Rosaline";
     --color-espresso: #080808;
     --color-champagne: #fbf0e3;
     --color-bean: #554340;
@@ -29,13 +29,13 @@ main {
     @apply relative;
 }
 h1 {
-    @apply text-6xl mb-6 font-title;
+    @apply text-5xl mb-6 font-display;
 }
 h2 {
-    @apply text-4xl mb-4 text-center;
+    @apply text-4xl mb-4 text-center font-display;
 }
 h3 {
-    @apply text-2xl mb-4;
+    @apply text-3xl mb-4;
 }
 p {
     @apply text-base mb-1;
