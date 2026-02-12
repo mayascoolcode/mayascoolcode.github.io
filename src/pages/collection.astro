@@ -7,7 +7,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>("../assets/decor/*",
 });
 const collectionItems = Object.values(images).map(module => module.default);
 ---
-<Layout title="Collection" description="Mtchtmy's links, resources, homies." sprite=''>
+<Layout title="Collection" description="Mtchtmy's links, resources, homies." sprite='/sprites/index.png'>
     <section class="text-center">
         {collectionItems.map((image) => (<Image src={image} alt="decor image" loading="lazy"/>))}
     </section>
