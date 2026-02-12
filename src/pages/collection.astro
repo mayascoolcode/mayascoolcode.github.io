@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from "astro:assets";
+
+const images = import.meta.glob<{ default: ImageMetadata }>("../assets/decor/*", { 
+  eager: true 
+});
+const collectionItems = Object.values(images).map(module => module.default);
+---
+<Layout title="Collection" description="Mtchtmy's links, resources, homies." sprite=''>
+    <section class="text-center">
+        {collectionItems.map((image) => (<Image src={image} alt="decor image" loading="lazy"/>))}
+    </section>
+</Layout>
+
+<style>
+    img {
+        display: inline;
+    }
+</style>
