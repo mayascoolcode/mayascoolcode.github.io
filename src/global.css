@@ -10,9 +10,9 @@
 /* Theme */
 @theme {
     --font-display: "Rosaline";
-    --color-primary: #070604;
-    --color-secondary: #ebe4dc;
-    --color-tertiary: #7d7254;
+    --color-bg: #070604;
+    --color-fg: #ebe4dc;
+    --color-accent: #7d7254;
     --color-dim: #a5998d;
 }
 
@@ -21,7 +21,7 @@ html {
     @apply scroll-smooth;
 }
 body {
-    @apply text-base font-serif bg-primary text-secondary;
+    @apply text-base font-serif bg-bg text-fg;
 } 
 section {
     @apply py-4;
@@ -33,7 +33,7 @@ h1 {
     @apply text-5xl mb-6 font-display;
 }
 h2 {
-    @apply text-4xl mb-4 text-center text-tertiary;
+    @apply text-4xl mb-4 text-center text-accent;
 }
 h3 {
     @apply text-3xl mb-4;
@@ -42,7 +42,7 @@ p {
     @apply text-base mb-1;
 }
 a {
-    @apply text-tertiary;
+    @apply text-accent;
 }
 small {
     @apply text-dim;
