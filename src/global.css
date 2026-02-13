@@ -10,9 +10,10 @@
 /* Theme */
 @theme {
     --font-display: "Rosaline";
-    --color-espresso: #080808;
-    --color-champagne: #fbf0e3;
-    --color-bean: #554340;
+    --color-primary: #070604;
+    --color-secondary: #ebe4dc;
+    --color-tertiary: #7d7254;
+    --color-dim: #a5998d;
 }
 
 /* Elements */
@@ -20,7 +21,7 @@ html {
     @apply scroll-smooth;
 }
 body {
-    @apply text-base font-serif text-champagne bg-espresso;
+    @apply text-base font-serif bg-primary text-secondary;
 } 
 section {
     @apply py-4;
@@ -32,7 +33,7 @@ h1 {
     @apply text-5xl mb-6 font-display;
 }
 h2 {
-    @apply text-4xl mb-4 text-center font-display;
+    @apply text-4xl mb-4 text-center text-tertiary;
 }
 h3 {
     @apply text-3xl mb-4;
@@ -40,8 +41,11 @@ h3 {
 p {
     @apply text-base mb-1;
 }
+a {
+    @apply text-tertiary;
+}
 small {
-    @apply text-bean;
+    @apply text-dim;
 }
 img {
     @apply p-2;
