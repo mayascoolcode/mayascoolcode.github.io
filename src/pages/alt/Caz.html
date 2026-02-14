@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/favicon/heart.gif" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caz's Valentine</title>
+</head>
+<style>
+    html {
+        background-image: url('https://sadhost.neocities.org/images/tiles/heartgrid.gif');
+    }
+    body {
+        text-align: center;
+        max-width: 700px;
+        margin: auto;
+        color: #57013a;
+        font-family: 'basiic';
+        padding: 2rem;
+    }
+    img {
+        max-width: 100%;
+    }
+    a {
+        color: inherit;
+    }
+    @font-face {
+        font-family: 'basiic';
+        src: url('/src/assets/lib/fonts/basiic.ttf');
+    }
+    @font-face { 
+        font-family: ecoder;
+        src: url(https://dl.dropbox.com/s/2wrgv8i3jsqkv6p/Ecoder-Italic.otf);
+    }  
+    .scripted {
+        filter: drop-shadow( 0 3px #9a6fb0) drop-shadow( 2px 0 #9a6fb0) drop-shadow( 0 -1px #ffa9c2) drop-shadow( -1px 0 #9a6fb0) drop-shadow( 0 5px white) drop-shadow( 5px 0 white) drop-shadow( 0 -5px white) drop-shadow( -5px 0 white) drop-shadow(1px 1px 0 rgba(172,172,172,0.6)) drop-shadow(1px 1px 0 rgba(172,172,172,0.6)) drop-shadow( 0 0 2px #424242);
+        color:#FDE6FF;
+        font-family: ecoder;
+    }
+    .img {
+        transition: all 0.5s;
+        display: block;
+        transition: 1s ease;
+        -webkit-mask-image: url(https://dl.dropbox.com/s/2kih8ox9q2czjeg/pngfind.com-kawaii-transparent-png-621355.png);
+        -webkit-mask-size: 220%;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        border-width: 7px;
+        border-style: solid;
+        border-image: url("https://i.imgur.com/FsgoCPW.png") 7 fill round;
+        max-width: 70%;
+        margin: auto;
+    }
+    .img:hover{
+        transition: all 0.5s;
+        -webkit-mask-image: url(https://dl.dropbox.com/s/2kih8ox9q2czjeg/pngfind.com-kawaii-transparent-png-621355.png);
+        -webkit-mask-size: 100%;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+    }
+</style>
+<body>
+    <header>
+        <h1 class="scripted">To: Caz</h1>
+        <img src="/caz/hearts5.png" alt="">
+    </header>
+    <main>
+        <section>
+            <a href="/Caz.webp" download><img src="/Caz.webp" alt="" class="img"></a>
+            <p>Happy Valentines Day!</p>
+            <p>Being with you these past few months has been some of the best times of my life. I've never felt this way before, and you have shown me that love is possible, in a world that feels devoid of it. You are literally everything, and I cannot imagine anyone or anything better than you. There is nothing I'd change.</p>
+            <p>You are smart, you are hilarious, you are sexy. I love your body, and I love your mind even more so. You are one of the kindest people I've met, despite being a League Of Lesbians enjoyer <i>(and you know how those people typically are)</i>. You are admirable and I can tell you raised really well. You are patient when I am annoying, relaxed when I am hyper, and check my brattiness when it is needed. </p>
+            <p>You are soft with me. Being next to you quells my anxiety, and waking up next to you feels unreal. Sometimes I feel like this is all a dream, that I am meant to wake up from. And I am scared of that, because then I'd wish I could never open my eyes.</p>
+            <p>I dont think any amount of words could really summarize how amazing you are. But If this can convey even a fraction of that feeling, I hope you can internalize and accept it.</p>
+            <p>I am so glad you did not ghost me on Hinge. The alternate universe verson of me would loose their mind. Hope you like the painting I made. Look at the lil Gengar <i>(he's hard to draw)</i>.</p>
+            <p>~ I love you so much! ~</p> 
+        </section>
+    </main>
+    <footer>
+        <img src="/caz/hangingsparklehearts.gif" alt="">
+        <h1 class="scripted">From: Amaya</h1>
+    </footer>
+</body>
+</html>
+
+<script type="text/javascript">
+
+var password;
+var pass1="caz";
+password=prompt("enter your password to view this page.","");
+if (password==pass1)
+alert('password correct! click ok to enter.');
+else
+{
+window.location="u can put any link u want the page to get redirected to here";
+}
+
+
+// <![CDATA[
+var colour="#ffffff"; // what colour are the blobs
+var speed=50; // speed of animation, lower is faster
+var blobs=20; // how many blobs are in the jar
+var charc='♡'; // a blob - can be changed to charc='hello' or charc='*' for a different effect
+
+/***************************\
+* Blobs in a Jar Effect *
+* (c)2012 mf2fm web-design *
+* http://www.mf2fm.com/rv *
+* DON'T EDIT BELOW THIS BOX *
+\***************************/
+
+window.onload=fill_the_jar;
+var div;
+var xpos=new Array();
+var ypos=new Array();
+var zpos=new Array();
+var dx=new Array();
+var dy=new Array();
+var dz=new Array();
+var blob=new Array(); 
+var swide=800;
+var shigh=600;
+function fill_the_jar() {
+var i, dvs;
+div=document.createElement('div');
+dvs=div.style;
+dvs.position='fixed';
+dvs.left='0px';
+dvs.top='0px';
+dvs.width='1px';
+dvs.height='1px';
+document.body.appendChild(div);
+set_width();
+for (i=0; i<blobs; i++) {
+ add_blob(i);
+ jamjar(i);
+}
+}
+
+function add_blob(ref) {
+var dv, sy;
+dv=document.createElement('div');
+ dv.appendChild(document.createTextNode(charc));
+sy=dv.style;
+sy.position='absolute';
+sy.textAlign="center";
+ if (navigator.appName=="Microsoft Internet Explorer") {
+ sy.fontSize="10px";
+ sy.width="100px";
+ sy.height="100px";
+ sy.paddingTop="40px";
+ sy.color=colour;
+}
+else sy.color='rgba(0,0,0,0)';
+ ypos[ref]=Math.floor(shigh*Math.random());
+dy[ref]=(0.5+Math.random())*(Math.random()>.5?2:-2);
+xpos[ref]=Math.floor(swide*Math.random());
+dx[ref]=(0.5+Math.random())*(Math.random()>.5?2:-2);
+zpos[ref]=Math.random()*20;
+dz[ref]=(0.5+Math.random())*(Math.random()>.5?.5:-.5);
+blob[ref]=dv;
+div.appendChild(blob[ref]);
+set_blob(ref);
+}
+function rejig(ref, xy) {
+ if (xy=='y') {
+dx[ref]=(0.5+Math.random())*sign(dx[ref]);
+ dy[ref]=(0.5+Math.random())*-sign(dy[ref]);
+ }
+ else {
+ dx[ref]=(0.5+Math.random())*-sign(dx[ref]);
+ dy[ref]=(0.5+Math.random())*sign(dy[ref]);
+ }
+}
+function sign(a) {
+ if (a<0) return (-2);
+ else if (a>0) return (2);
+ else return (0);
+}
+function set_blob(ref) {
+var sy;
+sy=blob[ref].style;
+sy.top=ypos[ref]+'px';
+sy.left=xpos[ref]+'px';
+ if (navigator.appName=="Microsoft Internet Explorer") {
+ sy.filter="glow(color="+colour+",strength="+zpos[ref]+")";
+ sy.fontSize=30-zpos[ref]+"px";
+}
+else {
+ sy.textShadow=colour+' 0px 0px '+zpos[ref]+'px';
+ sy.fontSize=40+zpos[ref]+'px';
+}
+}
+function jamjar(ref) {
+if (ypos[ref]+dy[ref]<-50 || ypos[ref]+dy[ref]>shigh) rejig(ref, 'y');
+ypos[ref]+=dy[ref];
+if (xpos[ref]+dx[ref]<-50 || xpos[ref]+dx[ref]>swide) rejig(ref, 'x');
+xpos[ref]+=dx[ref];
+if (zpos[ref]+dz[ref]<0 || zpos[ref]+dz[ref]>20) dz[ref]=-dz[ref];
+zpos[ref]+=dz[ref];
+set_blob(ref);
+setTimeout("jamjar("+ref+")", speed);
+}
+
+window.onresize=set_width;
+function set_width() {
+ var sw_min=999999;
+ var sh_min=999999;
+ if (document.documentElement && document.documentElement.clientWidth) {
+ if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+ if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+ }
+ if (typeof(self.innerWidth)!="undefined" && self.innerWidth) {
+ if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+ if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+ }
+ if (document.body.clientWidth) {
+ if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+ if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+ }
+ if (sw_min==999999 || sh_min==999999) {
+ sw_min=800;
+ sh_min=600;
+ }
+ swide=sw_min;
+ shigh=sh_min;
+}
+// ]]>
+
+// <![CDATA[
+var colours=new Array('#f00', '#f06', '#f0f', '#f6f', '#f39', '#f9c'); // colours of the hearts
+var minisize=16; // smallest size of hearts in pixels
+var maxisize=28; // biggest size of hearts in pixels
+var hearts=66; // maximum number of hearts on screen
+var over_or_under="over"; // set to "over" for hearts to always be on top, or "under" to allow them to float behind other objects
+
+/*****************************
+*JavaScript Love Heart Cursor*
+*  (c)2013+ mf2fm web-design *
+*   http://www.mf2fm.com/rv  *
+*  DON'T EDIT BELOW THIS BOX *
+*****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var herz=new Array();
+var herzx=new Array();
+var herzy=new Array();
+var herzs=new Array();
+var kiss=false;
+
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addRVLoadEvent(mwah);
+
+function mwah() { if (document.getElementById) {
+  var i, heart;
+  for (i=0; i<hearts; i++) {
+    heart=createDiv("auto", "auto");
+    heart.style.visibility="hidden";
+	heart.style.zIndex=(over_or_under=="over")?"1001":"0";
+    heart.style.color=colours[i%colours.length];
+	heart.style.pointerEvents="none";
+    if (navigator.appName=="Microsoft Internet Explorer") heart.style.filter="alpha(opacity=75)";
+    else heart.style.opacity=0.75;
+    heart.appendChild(document.createTextNode(String.fromCharCode(9829)));
+    document.body.appendChild(heart);
+    herz[i]=heart;
+	herzy[i]=false;
+  }
+  set_scroll();
+  set_width();
+  herzle();
+}}
+
+function herzle() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<hearts; c++) if (herzy[c]===false) {
+	  herz[c].firstChild.nodeValue=String.fromCharCode(9829);
+      herz[c].style.left=(herzx[c]=x-minisize/2)+"px";
+      herz[c].style.top=(herzy[c]=y-minisize)+"px";
+      herz[c].style.fontSize=minisize+"px";
+	  herz[c].style.fontWeight='normal';
+      herz[c].style.visibility='visible';
+      herzs[c]=minisize;
+      break;
+    }
+  }
+  for (c=0; c<hearts; c++) if (herzy[c]!==false) blow_me_a_kiss(c);
+  setTimeout("herzle()", 40);
+}
+
+document.onmousedown=pucker;
+document.onmouseup=function(){clearTimeout(kiss);};
+
+function pucker() {
+  ox=-1;
+  oy=-1;
+  kiss=setTimeout('pucker()', 100);
+}
+
+function blow_me_a_kiss(i) {
+  herzy[i]-=herzs[i]/minisize+i%2;
+  herzx[i]+=(i%5-2)/5;
+  if (herzy[i]<sdown-herzs[i] || herzx[i]<sleft-herzs[i] || herzx[i]>sleft+swide-herzs[i]) {
+    herz[i].style.visibility="hidden";
+    herzy[i]=false;
+  }
+  else if (herzs[i]>minisize+2 && Math.random()<.5/hearts) break_my_heart(i);
+  else {
+    if (Math.random()<maxisize/herzy[i] && herzs[i]<maxisize) herz[i].style.fontSize=(++herzs[i])+"px";
+    herz[i].style.top=herzy[i]+"px";
+    herz[i].style.left=herzx[i]+"px";
+  }
+}
+
+function break_my_heart(i) {
+  var t;
+  herz[i].firstChild.nodeValue=String.fromCharCode(9676);
+  herz[i].style.fontWeight='bold';
+  herzy[i]=false;
+  for (t=herzs[i]; t<=maxisize; t++) setTimeout('herz['+i+'].style.fontSize="'+t+'px"', 60*(t-herzs[i]));
+  setTimeout('herz['+i+'].style.visibility="hidden";', 60*(t-herzs[i]));
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height;
+  div.style.width=width;
+  div.style.overflow="hidden";
+  div.style.backgroundColor="transparent";
+  return (div);
+}
+
+</script>
+                        
+                        
