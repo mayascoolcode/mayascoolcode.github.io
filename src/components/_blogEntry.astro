@@ -1,16 +1,18 @@
 ---
-interface Props {
-  blogTitle: string;
-  blogDate: string;
-}
-const { blogTitle, blogDate } = Astro.props;
+import Layout from "../layouts/Layout.astro";
+const { frontmatter } = Astro.props;
 ---
-<div class="border border-accent text-bean bg-champagne p-5 my-5">
-	<div class="border-b border-accent flex items-center justify-between mb-5">
-    <h3>{blogTitle}</h3>
-    <small>{blogDate}</small>
-  </div>
-  <div>
-		<p><slot /></p>
-  </div>
-</div>
+<Layout>
+	<div class="border-fg p-5 my-7">
+		<div class="flex items-center justify-between mb-5">
+    		<h3>{frontmatter.blogTitle}</h3>
+    		<small>{frontmatter.blogDate}</small>
+  		</div>
+  		<div>
+			<p><slot /></p>
+  		</div>
+		<div class="text-center my-6">
+			<a href="/blog/">return</a>
+		</div>
+	</div>
+</Layout>

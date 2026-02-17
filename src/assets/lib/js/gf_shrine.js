@@ -1,12 +1,4 @@
-var password;
-var pass1="caz";
-password=prompt("enter your password to view this page.","");
-if (password==pass1)
-alert('password correct! click ok to enter.');
-else
-{
-window.location="u can put any link u want the page to get redirected to here";
-}
+// Password protection
 
 
 // <![CDATA[
