@@ -15,10 +15,10 @@
 @theme {
     --font-display: rosaline;
     --font-text: basiic;
-    --color-bg: #050002;
-    --color-fg: #eee;
-    --color-accent: #46232d;
-    --color-dim: #2A2A2A;
+    --color-bg: #000;
+    --color-fg: #fbf0e3;
+    --color-accent: #80543d;
+    --color-dim: #1c1d18;
 }
 
 /* Elements */
