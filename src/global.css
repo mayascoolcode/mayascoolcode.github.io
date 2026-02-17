@@ -3,17 +3,22 @@
 
 /* Font Face */
 @font-face {
-    font-family: 'Rosaline';
+    font-family: rosaline;
     src: url('/src/assets/lib/fonts/Rosaline_Complete/Fonts/WEB/fonts/Rosaline-Regular.woff');
+}
+@font-face {
+    font-family: basiic;
+    src: url('/src/assets/lib/fonts/basiic.ttf');
 }
 
 /* Theme */
 @theme {
-    --font-display: "Rosaline";
-    --color-bg: #070604;
-    --color-fg: #ebe4dc;
-    --color-accent: #7d7254;
-    --color-dim: #a5998d;
+    --font-display: rosaline;
+    --font-text: basiic;
+    --color-bg: #050002;
+    --color-fg: #eee;
+    --color-accent: #46232d;
+    --color-dim: #2A2A2A;
 }
 
 /* Elements */
@@ -21,7 +26,7 @@ html {
     @apply scroll-smooth;
 }
 body {
-    @apply text-base font-serif bg-bg text-fg;
+    @apply text-base font-text bg-bg text-fg;
 } 
 section {
     @apply py-4;
