@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import gfIcon from '../assets/gifs/kitty.gif';
 ---
-<Layout title="Shrines" description="Mtchtmy's shrine." sprite=''>
+<Layout title="Shrines" description="Mtchtmy's shrine.">
 	<section>
 		<ul>
-			<li class="flex items-center"><img src="/favicon/kitty.gif" alt=""> <a href="/alt/shrines/gf/">Girlfriend Shrine</a></li>
+			<li class="flex items-center"><img src={gfIcon.src} alt=""> <a class="alt_link" href="/alt/shrines/gf/">Girlfriend Shrine</a></li>
 		</ul>
 	</section>
 </Layout>

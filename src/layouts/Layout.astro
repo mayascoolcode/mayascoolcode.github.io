@@ -4,14 +4,14 @@ import Header from './elements/Header.astro';
 import Aside from './elements/Aside.astro';
 import Main from './elements/Main.astro';
 import Footer from './elements/Footer.astro';
-import { Image } from 'astro:assets';
+import sprite from '../assets/img/sprites/index.png';
+import favicon from '../../public/favicon.ico';
 
 interface Props {
   title: string;
   description: string;
-  sprite: string;
 }
-const { title, description, sprite } = Astro.props;
+const { title, description } = Astro.props;
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -26,7 +26,7 @@ const { title, description, sprite } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="keywords" content="Mtchtmy, mmdungeon" />
 		<!-- Links -->
-		<link rel="icon" type="image/svg+xml" href="/src/assets/img/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href={favicon}/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 		<link rel="alternate" href="/src/feed.xml" type="application/rss+xml" title="RSS">
 		<!-- Title -->
@@ -39,9 +39,12 @@ const { title, description, sprite } = Astro.props;
 			<Main>
 				<h2>{title}</h2>
 				<slot />
-    			<img src={sprite} alt="" class="absolute -bottom-20 -right-10 w-60 md:w-80">
+    			<img src={sprite.src} alt="" class="absolute -bottom-20 -right-10 w-60 md:w-80">
 			</Main>
 		</div>
 		<Footer/>
 	</body>
+	<script>
+		document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+	</script>
 </html>

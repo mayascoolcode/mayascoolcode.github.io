@@ -2,19 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import { Image } from "astro:assets";
 
-const images = import.meta.glob<{ default: ImageMetadata }>("../assets/decor/*", { 
+const c = import.meta.glob<{ default: ImageMetadata }>("../assets/gifs/*", { 
   eager: true 
 });
-const collectionItems = Object.values(images).map(module => module.default);
+const collection = Object.values(c).map(module => module.default);
 ---
-<Layout title="Collection" description="Mtchtmy's links, resources, homies." sprite='/sprites/index.png'>
+<Layout title="Collection" description="Mtchtmy's links, resources, homies.">
     <section class="text-center">
-        {collectionItems.map((image) => (<Image src={image} alt="decor image" loading="lazy"/>))}
+        {collection.map((c) => (<Image src={c} alt="collection item" loading="lazy" class='inline'/>))}
     </section>
 </Layout>
-
-<style>
-    img {
-        display: inline;
-    }
-</style>

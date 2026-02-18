@@ -18,6 +18,7 @@
     --color-bg: #000;
     --color-fg: #fbf0e3;
     --color-accent: #80543d;
+    --color-alt: #b79567;
     --color-dim: #1c1d18;
 }
 
@@ -41,7 +42,7 @@ h2 {
     @apply text-4xl mb-4 text-center text-accent;
 }
 h3 {
-    @apply text-3xl mb-4;
+    @apply text-3xl mb-4 text-alt;
 }
 p {
     @apply text-base mb-1;
@@ -54,4 +55,10 @@ small {
 }
 img {
     @apply p-2;
+}
+
+
+
+.alt_link {
+    @apply text-alt;
 }
