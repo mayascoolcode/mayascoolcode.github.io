@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from "astro:assets";
+
+const d = import.meta.glob<{ default: ImageMetadata }>("../assets/img/drawings/*", { 
+  eager: true 
+});
+const drawings = Object.values(d).map(module => module.default);
+---
+<Layout title="Art" description="Mtchtmy's drawings and paintings.">
+    <section class="grid grid-cols-4 md:grid-cols-7">
+        {drawings.map((d) => (<Image src={d} alt="drawing image" loading="lazy"/>))}
+    </section>
+</Layout>
