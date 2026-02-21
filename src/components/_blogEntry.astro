@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 const { frontmatter } = Astro.props;
 ---
-<Layout title={frontmatter.blogDate} description={frontmatter.blogTitle} sprite="">
+<Layout title={frontmatter.blogDate} description={frontmatter.blogTitle}>
 	<div class="border-fg p-5 my-7">
 		<div class="flex items-center justify-between mb-5">
     		<h3>{frontmatter.blogTitle}</h3>
