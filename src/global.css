@@ -15,11 +15,11 @@
 @theme {
     --font-display: rosaline;
     --font-text: basiic;
-    --color-bg: #000;
-    --color-fg: #fbf0e3;
-    --color-accent: #80543d;
-    --color-alt: #b79567;
-    --color-dim: #1c1d18;
+    --color-bg: #0d0105;
+    --color-fg: #e4e1d6;
+    --color-accent: #5d5229;
+    --color-dim: #491f35;
+    --color-alt: #863c57;
 }
 
 /* Elements */
@@ -56,8 +56,6 @@ small {
 img {
     @apply p-2;
 }
-
-
 
 .alt_link {
     @apply text-alt;
