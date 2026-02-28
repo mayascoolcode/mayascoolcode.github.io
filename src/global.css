@@ -6,20 +6,14 @@
     font-family: rosaline;
     src: url('/src/assets/lib/fonts/Rosaline_Complete/Fonts/WEB/fonts/Rosaline-Regular.woff');
 }
-@font-face {
-    font-family: basiic;
-    src: url('/src/assets/lib/fonts/basiic.ttf');
-}
 
 /* Theme */
 @theme {
     --font-display: rosaline;
-    --font-text: basiic;
-    --color-bg: #0d0105;
-    --color-fg: #e4e1d6;
-    --color-accent: #5d5229;
-    --color-dim: #491f35;
-    --color-alt: #863c57;
+    --color-bg: #000;
+    --color-fg: #dcd8d2;
+    --color-accent: #c69bad;
+    --color-dim: #312728;
 }
 
 /* Elements */
@@ -27,7 +21,7 @@ html {
     @apply scroll-smooth;
 }
 body {
-    @apply text-base font-text bg-bg text-fg;
+    @apply text-base font-serif bg-bg text-fg;
 } 
 section {
     @apply py-4;
@@ -42,7 +36,7 @@ h2 {
     @apply text-4xl mb-4 text-center text-accent;
 }
 h3 {
-    @apply text-3xl mb-4 text-alt;
+    @apply text-3xl mb-4;
 }
 p {
     @apply text-base mb-1;
@@ -55,8 +49,4 @@ small {
 }
 img {
     @apply p-2;
-}
-
-.alt_link {
-    @apply text-alt;
 }
