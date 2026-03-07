@@ -7,7 +7,7 @@ const p = import.meta.glob<{ default: ImageMetadata }>("../assets/img/photos/*",
 });
 const photos = Object.values(p).map(module => module.default);
 ---
-<Layout title="Photos" description="Mtchtmy's pics.">
+<Layout title="Photos" description="My pics.">
     <section class="grid grid-cols-4 md:grid-cols-7">
         {photos.map((p) => (<Image src={p} alt="decor image" loading="lazy"/>))}
     </section>

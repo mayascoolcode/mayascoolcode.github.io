@@ -7,7 +7,7 @@ const c = import.meta.glob<{ default: ImageMetadata }>("../assets/gifs/*", {
 });
 const collection = Object.values(c).map(module => module.default);
 ---
-<Layout title="Collection" description="Mtchtmy's links, resources, homies.">
+<Layout title="Collection" description="My links, resources, and homies.">
     <section class="text-center">
         {collection.map((c) => (<Image src={c} alt="collection item" loading="lazy" class='inline'/>))}
     </section>
