@@ -3,13 +3,13 @@
 
 /* Font Face */
 @font-face {
-    font-family: rosaline;
-    src: url('/src/assets/lib/fonts/Rosaline_Complete/Fonts/WEB/fonts/Rosaline-Regular.woff');
+    font-family: evernight;
+    src: url('/src/assets/lib/fonts/evernight/evernight.ttf');
 }
 
 /* Theme */
 @theme {
-    --font-display: rosaline;
+    --font-display: evernight;
     --color-bg: #000;
     --color-fg: #dcd8d2;
     --color-accent: #c69bad;
@@ -21,7 +21,7 @@ html {
     @apply scroll-smooth;
 }
 body {
-    @apply text-base font-serif bg-bg text-fg;
+    @apply text-base font-sans bg-bg text-fg;
 } 
 section {
     @apply py-4;
