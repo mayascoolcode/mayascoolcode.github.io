@@ -24,5 +24,8 @@ import Button from '../assets/img/button.gif';
 				<li><b>2/6/26:</b> 		Website created + deployed.</li>
 			</ul>
 		</div>
+		<div class="m-5">
+			<!-- © wdisseny --><div id="contain_moon" style="text-align:center;"><div style="font-weight:bold"></div><div style="padding:18px;filter:drop-shadow(0 0 18px hsl(298,100%,28%))"></div><div></div><div style="font-size:small"></div></div><script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=60&lightColor=rgb(211,183,227)&shadeColor=rgb(0,0,0)&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="60px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b)}};a.open("GET",url,true);a.send()})()</script>
+		</div>
 	</section>
 </Layout>
