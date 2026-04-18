@@ -7,6 +7,9 @@ import Footer from './elements/Footer.astro';
 import sprite from '../assets/img/sprites/index.png';
 import favicon from '/favicon.ico';
 
+import { KnownAgents } from "@knownagents/sdk"
+const knownAgents = new KnownAgents("420e1fea-7931-4160-9fd6-bf87899f72fb");
+
 interface Props {
   	title: string;
   	description: string;
