@@ -3,13 +3,13 @@
 
 /* Font Face */
 @font-face {
-    font-family: evernight;
-    src: url('/src/assets/lib/fonts/evernight/evernight.ttf');
+    font-family: display;
+    src: url('/src/assets/lib/fonts/Curely-Free Typeface.ttf');
 }
 
 /* Theme */
 @theme {
-    --font-display: evernight;
+    --font-display: display;
     --color-bg: #000;
     --color-fg: #dcd8d2;
     --color-accent: #c69bad;
@@ -21,8 +21,8 @@ html {
     @apply scroll-smooth;
 }
 body {
-    @apply text-base font-sans bg-bg text-fg;
-} 
+    @apply text-base font-sans bg-bg text-fg font-sans max-w-1000;
+}
 section {
     @apply py-4;
 }
@@ -30,16 +30,16 @@ main {
     @apply relative;
 }
 h1 {
-    @apply text-5xl mb-6 font-display;
+    @apply text-7xl mb-6 font-display tracking-widest;
 }
 h2 {
-    @apply text-4xl mb-4 text-center text-accent;
+    @apply text-4xl mb-4 text-accent text-center;
 }
 h3 {
-    @apply text-3xl mb-4;
+    @apply text-2xl mb-4 text-accent;
 }
 p {
-    @apply text-base mb-1;
+    @apply mb-1;
 }
 a {
     @apply text-accent;

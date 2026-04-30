@@ -2,19 +2,29 @@
 import Layout from "../../../layouts/Layout.astro";
 import { Image } from 'astro:assets';
 import gfPainting from './gf_painting.webp';
+import skull from './skull.png';
+import blackpurpleheart from './blackpurpleheart.png';
 ---
 <Layout title="Caz's Valentine" description="My gf shrine.">
-	<section class="text-center">
-		<Image src={gfPainting} alt="A painting for Caz." width="500" class="m-auto"/>
-		<p>
-			Happy Valentines Day!
-			<br><br> Being with you these past few months has been some of the best times of my life. I've never felt this way before, and you have shown me that love is possible, in a world that feels devoid of it. You are literally everything, and I cannot imagine anyone or anything better than you. There is nothing I'd change.
-            <br><br> You are smart, you are hilarious, you are sexy. I love your body, and I love your mind even more so. You are one of the kindest people I've met, despite being a League Of Lesbians enjoyer <i>(and you know how those people typically are)</i>. You are admirable and I can tell you raised really well. You are patient when I am annoying, relaxed when I am hyper, and check my brattiness when it is needed.
-            <br><br> You are soft with me. Being next to you quells my anxiety, and waking up next to you feels unreal. Sometimes I feel like this is all a dream, that I am meant to wake up from. And I am scared of that, because then I'd wish I could never open my eyes.
-            <br><br> I dont think any amount of words could really summarize how amazing you are. But If this can convey even a fraction of that feeling, I hope you can internalize and accept it.
-            <br><br> I am so glad you did not ghost me on Hinge. The alternate universe verson of me would loose their mind. Hope you like the painting I made. Look at the lil Gengar <i>(he's hard to draw)</i>.
-            <br><br> ~ I love you so much! ~
-		</p>      
+	<section>
+		<div>
+			<Image src={skull} alt="skull" class="m-auto"/>
+		</div>
+		<div class="my-4">
+			<Image src={gfPainting} alt="A painting for Caz." width="500" class="m-auto my-5"/>
+			<div class="text-center">
+				<p>Happy Valentines Day!</p>
+				<br><p>It's selfish to start with this, but being with you has given me a sense a relief that I have not felt in a long time. So much of my life has been spent utterly hating myself, my life, and trying to harden myself away from any sense of vulnerability. Daydreaming about things I never thought I could have.</p>
+				<br><p>I never had much luck with romance <i>(or friendship)</i> , especially in my most formative years. I had taught myself to never really look or expect much, I perpetually feel misunderstood even as an adult.</p>
+				<br><p>So it means so much to me, that you still love me knowing there is so much wrong. You are the kindest and funniest person I have ever met. I love playing around and laughing and cudddling and kissing you. I love making fun of your soda water and League Of Legends addiction. I love spending time with you and your family; I feel more acccepted than I ever have in my own home. I know you hate the "Millenial Inner Child" thing, but I feel that in my heart I am still that lonely kid. And I hope you know, you have really helped me accept and start to heal that part of me. </p>
+				<br><p>I know that with you I can be my authentic self, and in turn offer you the ability to show that as well. We cry together, and help eachother. Waking up to you is definitely unreal. I wish on every star in the galaxy, that I may continue to. I am so glad you did not ghost me on Hinge.</p>
+				<br><p>I've really wanted to rewrite this for a long time, I feel that my first draft was very shallow and pithy, like, it wasn't really what I wanted to say. I felt like if I talked more about my feelings, it would undercut the idea that this is written for you. I overthought, I've never been good with feelings or using words to describe them.</p>
+				<br><p>~ I love you so much! ~</p>
+			</div>
+		</div>
+		<div>
+			<Image src={blackpurpleheart} alt="skull" class="m-auto"/>
+		</div>
 	</section>
 </Layout>
 
