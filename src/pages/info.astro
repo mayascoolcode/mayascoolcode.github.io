@@ -3,29 +3,58 @@ import Layout from '../layouts/Layout.astro';
 import tamav3 from '/src/assets/img/extra/tama-v3-pb.png';
 ---
 <Layout title="Info" description="About the webmaster.">
-	<section>
+	<section class="flex gap-5 flex-wrap justify-center">
+        <label><input type="radio" name="category" value="webmaster" checked> webmaster</label>
+        <!-- <label><input type="radio" name="category" value="characters" checked> characters</label> -->
+        <label><input type="radio" name="category" value="faq"> faq</label>
+    </section>
+	<section class="item" data-category="webmaster">
 		<div> <img src="" alt=""> </div>
 		<p> 21 ★ he/they <br> artist + dev ૮◞  ◟𑁬∘˙˚ bass lover <br> <a href="mailto:contact@mmdungeon.xyz">contact@mmdungeon.xyz</a> </p>
-	</section>
-	<section class="flex gap justify-center">
-		<div><a href="/other/photos"><img src="" alt="my photos"></a></div>
-		<!-- <div><a href="/other/diary"><img src="" alt="my diary"></a></div> -->
-		<div><a href="/other/collection"><img src="" alt="my collection"></a></div>
-	</section>
-	<section>
+		<div class="flex gap justify-center">
+			<div><a href="/other/photos"><img src="" alt="my photos"></a></div>
+			<!-- <div><a href="/other/diary"><img src="" alt="my diary"></a></div> -->
+			<div><a href="/other/collection"><img src="" alt="my collection"></a></div>
+		</div>
 		<a href="/secret/gf/lock"><img src="" alt="i <3 my gf"></a>
-	</section>
-	<!-- <section>
+    </section>
+	<section class="item" data-category="characters">
 		<p><i>(characters)</i></p>
-	</section> -->
-	<!-- <section>
-		<p><i>(faq)</i></p>
+    </section>
+	<section class="item text-left" data-category="faq">
 		<p> ☆ Pfp/banners/icons/reposts/studies are okay with credit.
 			<br>☆ No ocs based off my personal characters.
 			<br>☆ No sprite/retnry/layout use.
 			<br>☆ No AI, training, reposting, reusing.
 		</p>
-	</section> -->
+    </section>
+	<script>
+        const radioButtons = document.querySelectorAll('input[name="category"]');
+        const allItems = document.querySelectorAll('.item');
+
+        function filterItems() {
+            let selectedValue = 'all'; // default fallback
+            for (let radio of radioButtons) {
+                if (radio.checked) {
+                    selectedValue = radio.value;
+                    break;
+                }
+            }
+            for (let item of allItems) {
+                const itemCategory = item.getAttribute('data-category');
+                // Show item if selected category is 'all' OR item category matches selected category
+                if (selectedValue === 'all' || itemCategory === selectedValue) {
+                    item.style.display = '';     // revert to default display (block/inline-block as per browser)
+                } else {
+                    item.style.display = 'none'; // hide non-matching items
+                }
+            }
+        }
+        for (let radio of radioButtons) {
+            radio.addEventListener('change', filterItems);
+        }
+        filterItems();
+    </script>
 </Layout>
 
 
