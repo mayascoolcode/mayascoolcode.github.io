@@ -31,7 +31,8 @@ html {
     background-image: url("../src/assets/img/header.jpg");
 }
 body {
-    @apply text-base/6 font-sans bg-bg text-fg text-center;
+    @apply text-base/6 font-sans bg-bg text-fg text-center font-mono m-auto h-full;
+    max-width: 1000px;
 }
 header, aside, nav, main, footer {
     @apply p-3;
