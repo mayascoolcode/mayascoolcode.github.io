@@ -36,7 +36,6 @@ body {
 header, aside, nav, main, footer {
     @apply p-3;
 }
-
 h1 {
     @apply text-7xl mb-6 font-display tracking-widest;
 }

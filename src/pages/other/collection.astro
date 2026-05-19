@@ -12,38 +12,8 @@ const items = Object.values(folders).map(module => module.default);
     }
 </style>
 <Layout title="Collection" description="My resources and homies.">
-    <small>Select a category:</small>
-    <section>
-        <section class="flex gap-5 flex-wrap justify-center">
-            <label><input type="radio" name="category" value="stuff" checked> stuff</label>
-            <label><input type="radio" name="category" value="links"> links</label>
-        </section>
-    </section>
-    <section class="item text-left" data-category="links">
-        <details>
-			<summary>Resources</summary>
-			<ul class="list-disc">
-				<li><a href="https://hillhouse.neocities.org/journal/notes/palestine" target="_blank" rel="noopener noreferrer">Free Palestine</a></li>
-				<li><a href="https://crushcapitalism.neocities.org/" target="_blank" rel="noopener noreferrer">Let's Crush Capitalism</a></li>
-				<li><a href="https://annas-archive.gl/" target="_blank" rel="noopener noreferrer">Anna's Archive</a></li>
-				<li><a href="https://wowroms.com/en/" target="_blank" rel="noopener noreferrer">WowRoms</a></li>
-				<li><a href="https://kaomoji.you/en/" target="_blank" rel="noopener noreferrer">Kaomojis</a></li>
-				<li><a href="https://pixelsafari.neocities.org/" target="_blank" rel="noopener noreferrer">Coco's Pixel Safari</a></li>
-			</ul>
-		</details>
-		<details>
-			<summary>Inspirations</summary>
-			<ul class="list-disc">
-				<li><a href="https://uranohead.neocities.org" target="_blank" rel="noopener noreferrer">Urano</a></li>
-				<li><a href="http://mizuno-junko.com/" target="_blank" rel="noopener noreferrer">Junko Minuzo</a></li>
-				<li><a href="https://pinkmoondoll9shihtzu.neocities.org/" target="_blank" rel="noopener noreferrer">PMD9</a></li>
-				<li><a href="https://y-hill.net/" target="_blank" rel="noopener noreferrer">Yan-Hill</a></li>
-				<li><a href="https://axayacatl.neocities.org/" target="_blank" rel="noopener noreferrer">Axacatyl</a></li>
-				<li><a href="https://asiteforatrueloser.neocities.org/" target="_blank" rel="noopener noreferrer">My old neocities site I got locked out of</a></li>
-			</ul>
-		</details>
-    </section>
     <section class="item" data-category="stuff">
+        <!-- links -->
         <div>
             <a href="https://cinni.net/" target="_blank" rel="noopener noreferrer"><img src="https://cinni.net/images/button/cinni_angelbutton3.gif" alt=""></a>
             <a href="https://grossgirl94.neocities.org/" target="_blank" rel="noopener noreferrer"><img src="https://grossgirl94.neocities.org/photos/grossgirl94%20button%20transparent.gif" alt=""></a>
@@ -51,64 +21,43 @@ const items = Object.values(folders).map(module => module.default);
             <a href="https://hillhouse.neocities.org/" target="_blank" rel="noopener noreferrer"><img src="https://hillhouse.neocities.org/_images/toybox/_buttons/users/hillhouse3.png" alt=""></a>
             <a href="https://menmy.neocities.org/" target="_blank" rel="noopener noreferrer"><img src="https://menmy.neocities.org/assets/media/linkme/ghostgirl_mine.gif" alt=""></a>
         </div>
+
+        <!-- my stuff -->
         <div>
             {items.map((item) => (<Image src={item} alt="collection item" loading="lazy"/>))}
+            <a href="https://www.mabsland.com/Adoption.html" target="_blank" rel="noopener noreferrer"><img src="https://www.mabsland.com/Pandas/Censor_NC17a.gif" class="m-auto" alt=""></a>
         </div>
-        <div id="selfinsertwebring">
-                <script>
-                    var nameSelfWebring = "mortalmutt";
-                    var relationshipSelfWebring = "cuddles with";
-                    var charnameSelfWebring = "shigaraki";
-                    var seriesSelfWebring = "bnha";
-                    var imgurlSelfWebring = "https://github.com/amayascoolcode/amayascoolcode.github.io/blob/main/src/assets/img/siw.jpg?raw=true";
-                    var templateWebring = document.createElement("selfinsertwebring");
-                    templateWebring.innerHTML = "<style> #templateWebring a {color: #BF3C8E; font-weight:bold} #templateWebring a:hover{font-weight:bold; color:#A43379}  #templateWebring {width:300px !important; text-align:center !important; height:164px !important; border:2px solid #DD28A7 !important; margin: auto !important; background-image:url('https://webring.koinuko.pink/img/bg.png'); background-size:cover} #webringiconbox {border:2px solid #DD28A7 !important; position:relative !important; overflow:hidden !important;   height:100px !important; width:100px !important; left:8px !important; padding:0px !important; margin:0px !important; margin-top:8px !important; box-sizing:content-box !important; max-width:100% !important; justify-content:start !important; display:block !important; clear:none !important } #iconWebring {width:100px !important; overflow:hidden !important; height:100px !important; margin:0px !important; padding:0px !important; box-sizing:content-box !important} #webringdescbox {width:166px !important; height:100px !important; margin-left:122px !important; margin-top:-102px !important; border:1px dashed #DD28A7 !important} #webringdesc{line-height: normal !important; font-weight:normal !important; padding:2px !important; width:160px !important; color:#452134 !important; font-family:Verdana !important; font-size:small !important; margin:auto !important; text-align:center !important; position:relative !important; top:50% !important;  -ms-transform: translateY(-50%) !important; -webkit-transform: translateY(-50%) !important; transform: translateY(-50%) !important;} #webringlinks {line-height:normal !important; font-weight:normal !important; width:278px !important; margin:auto !important; height:38px !important; margin-top:6px !important; border:1px dashed #DD28A7 !important} #linkparaWebring {font-family:Verdana !important; color:#452134 !important; font-size:small !important; 	margin:auto !important; line-height: normal !important; text-align:center !important;	margin-top:3px !important; padding:0px !important} </style> <div id='templateWebring'> <div id='webringiconbox'> <img id='iconWebring' src='" + imgurlSelfWebring + "'/> </div> <div id='webringdescbox'> <p id='webringdesc'> <strong>" + nameSelfWebring + "</strong> " + relationshipSelfWebring + "<br /> <strong>" + charnameSelfWebring + "</strong> from <strong>" + seriesSelfWebring + "</strong>! </p> </div> <div id='webringlinks'>	<p id='linkparaWebring'> | <a href='https://webring.koinuko.pink/members.php' target='_PARENT'>Members List</a> | <br/>	Part of the <a href='https://webring.koinuko.pink/members.php' target='_PARENT'>Self-Insert Webring</a></p> </div> </div>"; 
-                        document.getElementById("selfinsertwebring").appendChild(templateWebring);
-                </script>
+
+        <!-- webrings -->
+        <div>
+            <div id="selfinsertwebring">
+                    <script>
+                        var nameSelfWebring = "mortalmutt";
+                        var relationshipSelfWebring = "cuddles with";
+                        var charnameSelfWebring = "shigaraki";
+                        var seriesSelfWebring = "bnha";
+                        var imgurlSelfWebring = "https://github.com/amayascoolcode/amayascoolcode.github.io/blob/main/src/assets/img/siw.jpg?raw=true";
+                        var templateWebring = document.createElement("selfinsertwebring");
+                        templateWebring.innerHTML = "<style> #templateWebring a {color: #BF3C8E; font-weight:bold} #templateWebring a:hover{font-weight:bold; color:#A43379}  #templateWebring {width:300px !important; text-align:center !important; height:164px !important; border:2px solid #DD28A7 !important; margin: auto !important; background-image:url('https://webring.koinuko.pink/img/bg.png'); background-size:cover} #webringiconbox {border:2px solid #DD28A7 !important; position:relative !important; overflow:hidden !important;   height:100px !important; width:100px !important; left:8px !important; padding:0px !important; margin:0px !important; margin-top:8px !important; box-sizing:content-box !important; max-width:100% !important; justify-content:start !important; display:block !important; clear:none !important } #iconWebring {width:100px !important; overflow:hidden !important; height:100px !important; margin:0px !important; padding:0px !important; box-sizing:content-box !important} #webringdescbox {width:166px !important; height:100px !important; margin-left:122px !important; margin-top:-102px !important; border:1px dashed #DD28A7 !important} #webringdesc{line-height: normal !important; font-weight:normal !important; padding:2px !important; width:160px !important; color:#452134 !important; font-family:Verdana !important; font-size:small !important; margin:auto !important; text-align:center !important; position:relative !important; top:50% !important;  -ms-transform: translateY(-50%) !important; -webkit-transform: translateY(-50%) !important; transform: translateY(-50%) !important;} #webringlinks {line-height:normal !important; font-weight:normal !important; width:278px !important; margin:auto !important; height:38px !important; margin-top:6px !important; border:1px dashed #DD28A7 !important} #linkparaWebring {font-family:Verdana !important; color:#452134 !important; font-size:small !important; 	margin:auto !important; line-height: normal !important; text-align:center !important;	margin-top:3px !important; padding:0px !important} </style> <div id='templateWebring'> <div id='webringiconbox'> <img id='iconWebring' src='" + imgurlSelfWebring + "'/> </div> <div id='webringdescbox'> <p id='webringdesc'> <strong>" + nameSelfWebring + "</strong> " + relationshipSelfWebring + "<br /> <strong>" + charnameSelfWebring + "</strong> from <strong>" + seriesSelfWebring + "</strong>! </p> </div> <div id='webringlinks'>	<p id='linkparaWebring'> | <a href='https://webring.koinuko.pink/members.php' target='_PARENT'>Members List</a> | <br/>	Part of the <a href='https://webring.koinuko.pink/members.php' target='_PARENT'>Self-Insert Webring</a></p> </div> </div>"; 
+                            document.getElementById("selfinsertwebring").appendChild(templateWebring);
+                    </script>
+            </div>
+            <div id="trans_webring">
+                    <script is:inline src="https://transring.neocities.org/ring.js"></script>
+            </div>
+            <div id="noai_webring">
+                    <map name="noailong">
+                        <area href="https://baccyflap.com/noai" target="_blank" shape="poly" coords="51,1,41,29,287,29,298,1" alt="no ai webring" title="no ai webring">
+                        <area href="https://baccyflap.com/noai/?prv&s=mtm" target="_top" shape="poly" coords="43,0,0,15,32,30" alt="previous" title="previous">
+                        <area href="https://baccyflap.com/noai/?rnd" target="_top" shape="poly" coords="307,1,295,29,308,29,319,1" alt="random" title="random">
+                        <area href="https://baccyflap.com/noai/?nxt&s=mtm" target="_top" shape="poly" coords="327,0,316,30,359,15" alt="next" title="next">
+                    </map>
+                    <img usemap="#noailong" src="https://baccyflap.com/noai/longwidget.gif" alt="a long purple-and-blue star-spangled bar with purple-and-blue white-haloed letters in it that read THE NO AI WEBRING. the bar extends into two arrows pointing left and right, labeled PREV and NEXT, and there's a little button labeled RANDOM"> 
+            </div>
+            <div id="wwbtn"><a href="https://webmasterwebring.netlify.app"><img src="https://file.garden/ZrZSgsrYfQXsO7QH/ww/50x50.png"></a><br><a href="https://webmasterwebring.netlify.app?YOURSLUG-previous">prev</a> <a href="https://webmasterwebring.netlify.app?YOURSLUG-random">?</a> <a href="https://webmasterwebring.netlify.app?mortalmutt-next">next</a>
         </div>
-        <div id="trans_webring">
-                <script is:inline src="https://transring.neocities.org/ring.js"></script>
-        </div>
-        <div id="noai_webring">
-                <map name="noailong">
-                    <area href="https://baccyflap.com/noai" target="_blank" shape="poly" coords="51,1,41,29,287,29,298,1" alt="no ai webring" title="no ai webring">
-                    <area href="https://baccyflap.com/noai/?prv&s=mtm" target="_top" shape="poly" coords="43,0,0,15,32,30" alt="previous" title="previous">
-                    <area href="https://baccyflap.com/noai/?rnd" target="_top" shape="poly" coords="307,1,295,29,308,29,319,1" alt="random" title="random">
-                    <area href="https://baccyflap.com/noai/?nxt&s=mtm" target="_top" shape="poly" coords="327,0,316,30,359,15" alt="next" title="next">
-                </map>
-                <img usemap="#noailong" src="https://baccyflap.com/noai/longwidget.gif" alt="a long purple-and-blue star-spangled bar with purple-and-blue white-haloed letters in it that read THE NO AI WEBRING. the bar extends into two arrows pointing left and right, labeled PREV and NEXT, and there's a little button labeled RANDOM"> 
-        </div>
-        <div id="wwbtn"><a href="https://webmasterwebring.netlify.app"><img src="https://file.garden/ZrZSgsrYfQXsO7QH/ww/50x50.png"></a><br><a href="https://webmasterwebring.netlify.app?YOURSLUG-previous">prev</a> <a href="https://webmasterwebring.netlify.app?YOURSLUG-random">?</a> <a href="https://webmasterwebring.netlify.app?mortalmutt-next">next</a>
     </section>
-</section>
-<section class="my-6">
+    <section class="my-6">
 		<a href="/info">return</a>
 	</section>
-    <script>
-        const radioButtons = document.querySelectorAll('input[name="category"]');
-        const allItems = document.querySelectorAll('.item');
-
-        function filterItems() {
-            let selectedValue = 'all'; // default fallback
-            for (let radio of radioButtons) {
-                if (radio.checked) {
-                    selectedValue = radio.value;
-                    break;
-                }
-            }
-            for (let item of allItems) {
-                const itemCategory = item.getAttribute('data-category');
-                // Show item if selected category is 'all' OR item category matches selected category
-                if (selectedValue === 'all' || itemCategory === selectedValue) {
-                    item.style.display = '';     // revert to default display (block/inline-block as per browser)
-                } else {
-                    item.style.display = 'none'; // hide non-matching items
-                }
-            }
-        }
-        for (let radio of radioButtons) {
-            radio.addEventListener('change', filterItems);
-        }
-        filterItems();
-    </script>
 </Layout>

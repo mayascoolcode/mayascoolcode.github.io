@@ -2,35 +2,29 @@
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import button from '../assets/img/button.gif';
-import welcome from '/src/assets/img/extra/welcome5.gif';
 import sprite from '../assets/img/art/sprites/bussy.png';
-import secretblog from '../assets/img/art/secretblog.png';
 ---
 <Layout title="Home" description="Welcome to the dungeon.">
 	<section class="text-center">
-		<Image src={welcome} alt="Website button" class="m-auto" />
-		<p> Welcome to the dungeon ★ my website, blog, and archive. ⋆˙꩜ <br> <i>Updates every Wednesday;</i> <a href="https://guestbook.mmdungeon.xyz" target="_blank" rel="noopener noreferrer">Sign the guestbook! <3</a></p>
-		<script type="text/javascript" src="//counter1.fc2.com/counter.php?id=40502263&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=40502263&main=1" /></noscript>
-		<Image src={button} alt="Website button" class="m-auto" />
-		<!-- <a href="https://hillhouse.neocities.org/journal/notes/palestine"><img src="https://hillhouse.neocities.org/_images/toybox/_buttons/standwith.png" alt="" class="m-auto"></a> -->
-	</section>
-	<section class="text-left">
-		<h3>News</h3>
-		<h3>Update Log</h3>
-		<ul class="list-disc">
-			<li><strong>5/15/26:</strong> Layout changed.</li>
-			<li><strong>5/13/26:</strong> Update username.</li>
-			<li><strong>5/10/26:</strong> Restructured layout, add news + links.</li>
-		</ul>
-	</section>
+		<!-- header image -->
+		<img src="" alt="">
+	</section>	
 	<section>
+		<!-- outgoing links -->
 		<!-- <div><a href="https://commission.mmdungeon.xyz"><img src="" alt="Interested in commissions?"></a></div> -->
 		<!-- <div><a href="https://newsletter.mmdungeon.xyz" target="_blank" rel="noopener noreferrer"><img src="" alt="Join the Newsletter: Patreon + Discord community"></a></div> -->
 		<div><a href="https://microblog.mmdungeon.xyz/" target="_blank" rel="noopener noreferrer"><img src="" alt="My secret microblog"></a></div>
-	</section>
-	<section>
-        <a href="https://www.mabsland.com/Adoption.html" target="_blank" rel="noopener noreferrer"><img src="https://www.mabsland.com/Pandas/Censor_NC17a.gif" class="m-auto" alt=""></a>
-		<a href="https://www.imood.com/users/mortalmutt"><img src="https://moods.imood.com/display/uname-mortalmutt/fg-FFFFFF/trans-1/imood.gif" alt="The current mood of mortalmutt at www.imood.com" border="0" class="m-auto"></a>
-		<!-- <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=mortalmutt" defer></script> -->
+		<div><a href="https://guestbook.mmdungeon.xyz/" target="_blank" rel="noopener noreferrer"><img src="" alt="Sign the guestbook!"></a></div>
+		<div class="fixed -bottom-6 -right-2 w-60">
+			<!-- <a href="https://shop.mmdungeon.xyz/" target="_blank" rel="noopener noreferrer"> -->
+				<img src={sprite.src} alt="Shop <3">
+			<!-- </a> -->
+		</div>
+		
+		<!-- status -->
+		<div style="flex gap justify-center items-center">
+			<script type="text/javascript" src="//counter1.fc2.com/counter.php?id=40502263&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=40502263&main=1" /></noscript>
+			<Image src={button} alt="Website button" class="m-auto" />
+		</div>
 	</section>
 </Layout>
