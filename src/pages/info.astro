@@ -1,29 +1,34 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import button from '../assets/img/button.gif';
 ---
 <Layout title="Info" description="About the webmaster.">
+    <section>
+
+    </section>
 	<section>
         <!-- image -->
         <img src="" alt="">
+        <p> 21 ★ he/they <br> artist + dev ૮◞  ◟𑁬∘˙˚ bass lover </p>
         <a href="https://www.imood.com/users/mortalmutt"><img src="https://moods.imood.com/display/uname-mortalmutt/fg-FFFFFF/trans-1/imood.gif" alt="The current mood of mortalmutt at www.imood.com" border="0" class="m-auto"></a>
         
-        <!-- bio -->
-        <p> 21 ★ he/they <br> artist + dev ૮◞  ◟𑁬∘˙˚ bass lover </p>
-		<Image src={button} alt="Website button" class="m-auto" />
-        
         <!-- my stuff -->
-        <div class="flex gap-2 justify-center items-center">
-			<div><a href="/other/photos"><img src="" alt="my photos"></a></div>
-			<div><a href="/other/blog"><img src="" alt="my blog"></a></div>
-			<div><a href="/other/collection"><img src="" alt="my collection"></a></div>
-			<div><a href="/secret/gf/lock"><img src="" alt="i <3 my gf"></a></div>
+        <div class="flex flex-wrap gap-2 justify-center items-center">
+            <div><a href="https://blog.mmdungeon.xyz" target="_blank" rel="noopener noreferrer"><img src="" alt="my blog"></a></div>
+			<div><a href="/other/photos/"><img src="" alt="my photos"></a></div>
+			<div><a href="/secret/gf/lock/"><img src="" alt="i <3 my gf"></a></div>
 		</div>
-        
-        <!-- status -->
-		<div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=mortalmutt" defer></script>
     </section>
+    <!-- characters -->
+    <!-- <section>
+        <div>
+            <div><a href="https://toyhou.se/mortalmutt" target="_blank" rel="noopener noreferrer"><img src="" alt="my oc"></a></div>
+            <div><a href="https://toyhou.se/mortalmutt" target="_blank" rel="noopener noreferrer"><img src="" alt="my oc"></a></div>
+            <div><a href="https://toyhou.se/mortalmutt" target="_blank" rel="noopener noreferrer"><img src="" alt="my oc"></a></div>
+            <div><a href="https://toyhou.se/mortalmutt" target="_blank" rel="noopener noreferrer"><img src="" alt="my oc"></a></div>
+            <div><a href="https://toyhou.se/mortalmutt" target="_blank" rel="noopener noreferrer"><img src="" alt="my oc"></a></div>
+        </div>
+    </section> -->
 </Layout>
 
 

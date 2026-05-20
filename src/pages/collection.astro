@@ -1,9 +1,9 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro';
 import { Image } from "astro:assets";
 import selfinsertwebring from "../assets/lib/js/selfinsertwebring.js";
 
-const folders = import.meta.glob<{ default: ImageMetadata }>("../../assets/img/collection/*/*", { eager: true });
+const folders = import.meta.glob<{ default: ImageMetadata }>("../assets/img/collection/*/*", { eager: true });
 const items = Object.values(folders).map(module => module.default);
 ---
 <style>
