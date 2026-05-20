@@ -1,8 +1,8 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro';
 import { Image } from "astro:assets";
 
-const drawings_folder = import.meta.glob<{ default: ImageMetadata }>("../../assets/img/art/drawings/*", { eager: true });
+const drawings_folder = import.meta.glob<{ default: ImageMetadata }>("../assets/img/art/drawings/*", { eager: true });
 const drawings = Object.values(drawings_folder).map(module => module.default);
 ---
 <Layout title="Art" description="My drawings and paintings.">
