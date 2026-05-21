@@ -3,7 +3,7 @@ import Layout from "../../../layouts/Layout.astro";
 import { Image } from 'astro:assets';
 import welcome from '/src/assets/img/extra/textpassword.gif';
 ---
-<Layout title="GF Lock" description="My gf lock.">
+<Layout title="<3 Lock" description="My gf lock.">
 	<section>
 		<img src={welcome.src} alt="" class="m-auto">		
 		<div class="my-4">
@@ -16,7 +16,7 @@ import welcome from '/src/assets/img/extra/textpassword.gif';
 			function check() {
 				var pwd = document.getElementById('pwd').value;
 				if (pwd == 'lol') {
-					window.location.href = '/secret/gf/';
+					window.location.href = '../';
 				} else {
 					document.getElementById('error').innerHTML = 'Wrong password';
 				}

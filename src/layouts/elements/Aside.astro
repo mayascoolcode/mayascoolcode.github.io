@@ -3,17 +3,53 @@ import new_page from '/src/assets/img/extra/new19.gif';
 import { Image } from 'astro:assets';
 import button from '../../assets/img/button.gif';
 ---
-<aside class="flex-1/5 text-xl text-left">
+<aside class="flex-1/5 text-xl text-left text-accent">
 	<nav>
-    	<ul>
-        	<li><a href="/about/">About</a></li>
-        	<li class="flex items-center"><a href="/gallery/">Gallery</a> <img src={new_page.src} alt=""> </li>
-        	<!-- <li class="flex items-center"><a href="/blog/">Blog</a> <img src={new_page.src} alt=""> </li> -->
-        	<li class="flex items-center"><a href="/collection/">Collection</a> <img src={new_page.src} alt=""> </li>
-    	</ul>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/bio/">Bio</a></li>
+			
+			<li class="collapsible">
+				<input type="checkbox" id="work">
+				<label for="work">Work</label>
+				
+				<ul class="sub-menu">
+					<li><a href="/work/art/">Art</a></li>
+					<!-- <li><a href="/work/videos/">Videos</a></li> -->
+					<!-- <li><a href="/work/music/">Music</a></li> -->
+					<!-- <li><a href="/work/games/">Games</a></li> -->
+					<!-- <li><a href="/work/characters/">Characters</a></li> -->
+				</ul>
+			</li>
+
+
+		</ul>
 	</nav>
-	<!-- button -->
 	<a href="https://guestbook.mmdungeon.xyz" target="_blank" rel="noopener noreferrer"> <Image src={button} alt="button" class="m-auto" /> </a>
-	<!-- status -->
-    <div id="statuscafe" class="py-3 text-xs"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=mortalmutt" defer></script>
+    <div id="statuscafe" class="py-3 text-fg text-xs"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=mortalmutt" defer></script>
 </aside>
+
+<style>
+/* Hide the checkboxes */
+.collapsible input {
+    display: none;
+}
+
+/* Hide the sub-menu by default */
+.sub-menu {
+    display: none;
+    padding-left: 20px;
+}
+
+/* Show sub-menu when checkbox is checked */
+.collapsible input:checked ~ .sub-menu {
+    display: block;
+}
+
+/* Style the labels as clickable headers */
+.collapsible label {
+    cursor: pointer;
+    display: block;
+}
+
+</style>
