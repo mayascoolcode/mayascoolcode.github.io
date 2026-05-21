@@ -9,10 +9,19 @@
     font-family: display;
     src: url('/src/assets/lib/fonts/Curely-Free Typeface.ttf');
 }
+@font-face {
+    font-family: display2;
+    src: url('/src/assets/lib/fonts/ArtDystopia II.otf');
+}
+@font-face {
+    font-family: display3;
+    src: url('/src/assets/lib/fonts/Unutterable-Regular.ttf');
+}
+
 
 /* Theme */
 @theme {
-    --font-display: display;
+    --font-display: display3;
     --color-bg: #000;
     --color-fg: #fff;
     --color-accent: #d5a9c4;
@@ -38,13 +47,16 @@ header, aside, nav, main, footer {
     @apply p-3;
 }
 h1 {
-    @apply text-7xl mb-6 font-display tracking-widest;
+    @apply text-5xl my-1 font-display tracking-widest;
 }
 h2 {
     @apply text-4xl mb-4 text-accent text-center;
 }
 h3 {
-    @apply text-2xl mb-4 text-accent;
+    @apply text-3xl mb-4 text-accent;
+}
+h4 {
+    @apply text-xl mb-4 text-accent;
 }
 p {
     @apply my-3;
@@ -53,7 +65,7 @@ a {
     @apply text-accent;
 }
 button {
-    @apply border-1 px-2 py-1 bg-accent text-bg hover:bg-dim hover:text-fg;
+    @apply px-2 py-1 text-fg hover:text-accent;
 }
 small {
     @apply text-dim;

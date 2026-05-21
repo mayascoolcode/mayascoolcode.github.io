@@ -9,6 +9,7 @@ import Header from './elements/Header.astro';
 import Aside from './elements/Aside.astro';
 import Main from './elements/Main.astro';
 import Footer from './elements/Footer.astro';
+import Extra from './elements/Extra.astro';
 
 // Interface
 interface Props {
@@ -51,7 +52,8 @@ const knownAgents = new KnownAgents("420e1fea-7931-4160-9fd6-bf87899f72fb");
 				<slot/>
 			</Main>
 		</div>
-		<Footer/>	
+		<Footer/>
+		<Extra/>
 	</body>
 </html>
 
