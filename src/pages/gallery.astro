@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from "astro:assets";
+
+const photo_folder = import.meta.glob<{ default: ImageMetadata }>("../assets/img/photos/*", { eager: true });
+const photos = Object.values(photo_folder).map(module => module.default);
+
+const drawings_folder = import.meta.glob<{ default: ImageMetadata }>("../assets/img/art/drawings/*", { eager: true });
+const drawings = Object.values(drawings_folder).map(module => module.default);
+---
+<Layout title="Gallery" description="My photos, videos, drawings, music, and games.">
+	
+	<!-- selector -->
+	<section class="flex gap-2 mb-4 justify-center">
+		<button onclick="showTab('photos')">Photos</button>
+		<button onclick="showTab('drawings')">Drawings</button>
+	</section>
+	
+	<!-- photos -->
+	<section class="grid grid-cols-2 md:grid-cols-4" id="photos">
+		{photos.map((p) => (<Image src={p} alt="photo" loading="lazy"/>))}
+	</section>
+	<!-- drawings -->
+	<section class="grid grid-cols-2 md:grid-cols-4 hidden" id="drawings">
+        {drawings.map((d) => (<Image src={d} alt="drawing image" loading="lazy"/>))}
+    </section>
+
+</Layout>
+
+

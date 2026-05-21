@@ -1,18 +1,22 @@
 ---
 import new_page from '/src/assets/img/extra/new19.gif';
+import { Image } from 'astro:assets';
+import button from '../../assets/img/button.gif';
 ---
 <aside class="flex-1/5 text-xl text-left">
 	<nav>
     	<ul>
         	<li><a href="/">Home</a></li>
         	<li><a href="/about/">About</a></li>
-        	<li><a href="/blog/">Blog</a></li>
-        	<li><a href="/photos/">Photos</a></li>
-        	<li><a href="/art/">Art</a></li>
-        	<!-- <li><a href="/videos/">Videos</a></li> -->
-        	<!-- <li><a href="/music/">Music</a></li> -->
-        	<!-- <li><a href="/games/">Games</a></li> -->
+        	<!-- <li><a href="/blog/">Blog</a></li> -->
+        	<li><a href="/gallery/">Gallery</a></li>
         	<li><a href="/collection/">Collection</a></li>
     	</ul>
 	</nav>
+	<!-- button -->
+	<a href="https://guestbook.mmdungeon.xyz" target="_blank" rel="noopener noreferrer">
+		<Image src={button} alt="Website button" class="m-auto" />
+	</a>
+	<!-- status -->
+    <div id="statuscafe" class="py-3 text-xs"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=mortalmutt" defer></script>
 </aside>
