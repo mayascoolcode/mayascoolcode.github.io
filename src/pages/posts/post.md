@@ -1,5 +1,5 @@
 ---
-layout: ../../components/_blogPost.astro
+layout: ../../layouts/Post.astro
 title: Hello, World
 ---
 
