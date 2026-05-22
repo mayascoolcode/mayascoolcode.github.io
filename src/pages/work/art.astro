@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 const drawings_folder = import.meta.glob<{ default: ImageMetadata }>("../../assets/img/art/drawings/*", { eager: true });
 const drawings = Object.values(drawings_folder).map(module => module.default);
 ---
-<Layout title="Artwork">
+<Layout title="Art">
 	<section class="grid grid-cols-4">
         {drawings.map((d) => (<Image src={d} alt="drawing image" loading="lazy"/>))}
     </section>
