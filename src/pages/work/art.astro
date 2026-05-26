@@ -6,40 +6,9 @@ const drawings_folder = import.meta.glob<{ default: ImageMetadata }>("../../asse
 const drawings = Object.values(drawings_folder).map(module => module.default);
 ---
 <Layout title="Art">
-
 	<section class="grid grid-cols-4">
         {drawings.map((d) => (<Image src={d} alt="drawing image" loading="lazy"/>))}
     </section>
-
-    <!-- characters -->
-    <!-- <section>
-		<div>
-            <div><a href="https://toyhou.se/mortalmutt" target="_blank" rel="noopener noreferrer"><img src="" alt="my oc"></a></div>
-            <div><a href="https://toyhou.se/mortalmutt" target="_blank" rel="noopener noreferrer"><img src="" alt="my oc"></a></div>
-            <div><a href="https://toyhou.se/mortalmutt" target="_blank" rel="noopener noreferrer"><img src="" alt="my oc"></a></div>
-            <div><a href="https://toyhou.se/mortalmutt" target="_blank" rel="noopener noreferrer"><img src="" alt="my oc"></a></div>
-            <div><a href="https://toyhou.se/mortalmutt" target="_blank" rel="noopener noreferrer"><img src="" alt="my oc"></a></div>
-        </div>
-	</section> -->
-
-    <!-- comics -->
-    <!-- <section>
-		<div>
-			<table>
-				<tr>
-					<td><img src="" alt="img"></td>
-				</tr>
-				<tr>
-					<td>TITLE</td>
-				</tr>
-				<tr>
-					<td><p><a href="https://comicfury.com/comic.php?action=yourcomics" target="_blank" rel="noopener noreferrer">READ</a></p></td>
-				</tr>
-			</table>
-		</div>
-	</section> -->
-
-
 </Layout>
 
 
