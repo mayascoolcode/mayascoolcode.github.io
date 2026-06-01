@@ -22,10 +22,10 @@
 /* Theme */
 @theme {
     --font-display: display3;
-    --color-bg: #000;
-    --color-fg: #fff;
-    --color-accent: #d5a9c4;
-    --color-dim: #584663;
+    --color-bg: #000000;
+    --color-fg: #f8f1f9;
+    --color-accent: #e2b2e2;
+    --color-dim: #442e48;
 }
 
 /* Selection */
