@@ -1,5 +1,7 @@
 /* Pink Paw Print - https://www.cursors-4u.com/cursor/pink-paw-print */
-* { cursor: url('https://cdn.cursors-4u.net/previews/pink-paw-print-820c6758-32.webp') 32 32, auto !important; }
+* { 
+    cursor: url('https://cdn.cursors-4u.net/previews/pink-paw-print-820c6758-32.webp') 32 32, auto !important; 
+}
 
 /* Import */
 @import "tailwindcss";
@@ -50,7 +52,7 @@ h1 {
     @apply text-4xl font-display tracking-widest py-1;
 }
 h2 {
-    @apply text-2xl text-accent text-center uppercase py-2;
+    @apply text-2xl text-accent text-center py-2;
 }
 h3 {
     @apply text-xl text-accent py-3;

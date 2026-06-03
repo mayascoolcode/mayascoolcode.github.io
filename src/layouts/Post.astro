@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 const {frontmatter} = Astro.props;
 ---
-<Layout title={frontmatter.title} description={frontmatter.description}>
-    <section class="text-left">
+<Layout title={frontmatter.title}>
+    <section class="my-7 mx-5">
         <slot />
     </section>
     <section class="my-5 text-center">
