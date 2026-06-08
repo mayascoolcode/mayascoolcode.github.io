@@ -9,9 +9,6 @@ const drawings = Object.values(drawings_folder).map(module => module.default);
 	<section class="grid grid-cols-4">
         {drawings.map((d) => (<Image src={d} alt="drawing image" loading="lazy"/>))}
     </section>
-    <section>
-        <p><a href="https://characters.mmdungeon.xyz/" target="_blank" rel="noopener noreferrer">SEE ALL CHARACTERS</a></p>
-    </section>
 </Layout>
 
 
