@@ -2,23 +2,13 @@
 import Layout from '../../layouts/Layout.astro';
 import { Image } from "astro:assets";
 
-const drawings_folder = import.meta.glob<{ default: ImageMetadata }>("../../assets/img/art/drawings/*", { eager: true });
+const drawings_folder = import.meta.glob<{ default: ImageMetadata }>("../../assets/img/art/*", { eager: true });
 const drawings = Object.values(drawings_folder).map(module => module.default);
 ---
 <Layout title="Art">
 	<section class="grid grid-cols-4" id="drawings">
         {drawings.map((d) => (<Image src={d} alt="drawing image" loading="lazy"/>))}
     </section>
-    <section id="characters">
-        <div>
-            <p><a href="https://toyhou.se/mortalmutt" target="_blank" rel="noopener noreferrer"><img src="" alt="ALL CHARACTERS"></a></p>
-        </div>
-    </section>
-    <!-- <section id="comics">
-        <div>
-            <p><a href="https://comicfury.com/profile.php?username=mortalmutt" target="_blank" rel="noopener noreferrer"><img src="" alt="ALL COMICS"></a></p>
-        </div>
-    </section> -->
 </Layout>
 
 

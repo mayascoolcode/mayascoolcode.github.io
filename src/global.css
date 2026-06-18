@@ -1,29 +1,15 @@
-/* Pink Paw Print - https://www.cursors-4u.com/cursor/pink-paw-print */
-* { 
-    cursor: url('https://cdn.cursors-4u.net/previews/pink-paw-print-820c6758-32.webp') 32 32, auto !important; 
-}
-
 /* Import */
 @import "tailwindcss";
 
 /* Font Face */
 @font-face {
     font-family: display;
-    src: url('/src/assets/lib/fonts/Curely-Free Typeface.ttf');
+    src: url('/src/assets/lib/fonts/Gotique.ttf');
 }
-@font-face {
-    font-family: display2;
-    src: url('/src/assets/lib/fonts/ArtDystopia II.otf');
-}
-@font-face {
-    font-family: display3;
-    src: url('/src/assets/lib/fonts/Unutterable-Regular.ttf');
-}
-
 
 /* Theme */
 @theme {
-    --font-display: display3;
+    --font-display: display;
     --color-bg: #000000;
     --color-fg: #f8f1f9;
     --color-accent: #e2b2e2;
@@ -37,22 +23,23 @@
 }
 
 /* Elements */
+* { 
+    cursor: url('https://cdn.cursors-4u.net/previews/pink-paw-print-820c6758-32.webp') 32 32, auto !important; 
+}
 html {
     @apply scroll-smooth;
-    background-image: url("../src/assets/img/header.jpg");
 }
 body {
-    @apply text-base/6 font-sans bg-bg text-fg h-full m-auto p-2;
-    max-width: 1000px;
+    @apply text-base/6 font-serif bg-bg text-fg p-2 tracking-wide;
 }
 header, aside, nav, main, footer {
     @apply p-2;
 }
 h1 {
-    @apply text-4xl font-display tracking-widest py-1;
+    @apply text-5xl font-display tracking-widest;
 }
 h2 {
-    @apply text-2xl text-accent text-center py-2;
+    @apply text-3xl font-display text-accent text-center py-2;
 }
 h3 {
     @apply text-xl text-accent py-3;
