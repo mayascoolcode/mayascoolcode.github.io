@@ -59,6 +59,9 @@ small {
 details, summary {
     @apply py-1;
 }
+strong {
+    @apply text-accent;
+}
 img {
     @apply p-2;
 }
