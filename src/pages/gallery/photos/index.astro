@@ -1,8 +1,8 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../../../layouts/Layout.astro';
 import { Image } from "astro:assets";
 
-const photo_folder = import.meta.glob<{ default: ImageMetadata }>("../../assets/img/photos/*", { eager: true });
+const photo_folder = import.meta.glob<{ default: ImageMetadata }>("../../../assets/img/photos/*", { eager: true });
 const photos = Object.values(photo_folder).map(module => module.default);
 ---
 <Layout title="Photos">
