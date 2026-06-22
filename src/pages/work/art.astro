@@ -9,6 +9,12 @@ const drawings = Object.values(drawings_folder).map(module => module.default);
 	<section class="grid grid-cols-4" id="drawings">
         {drawings.map((d) => (<Image src={d} alt="drawing image" loading="lazy"/>))}
     </section>
+    <!-- <section id="comics">
+        <div><a href="https://comicfury.com/profile.php?username=mortalmutt" target="_blank" rel="noopener noreferrer"><img src="" alt="VIEW COMICS"></a></div>
+    </section> -->
+    <section id="characters">
+        <div><a href="https://toyhou.se/mortalmutt" target="_blank" rel="noopener noreferrer"><img src="" alt="VIEW CHARACTERS"></a></div>
+    </section>
 </Layout>
 
 
