@@ -10,10 +10,10 @@
 /* Theme */
 @theme {
     --font-display: display;
-    --color-bg: #000000;
-    --color-fg: #f8f1f9;
-    --color-accent: #e2b2e2;
-    --color-dim: #442e48;
+    --color-bg: #000;
+    --color-fg: #fff;
+    --color-accent: #bd97c6;
+    --color-dim: #62517b;
 }
 
 /* Selection */
