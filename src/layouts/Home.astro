@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// layout
+import Header from './elements/Header.astro';
+import Aside from './elements/Aside.astro';
+import Main from './elements/Main.astro';
+import Footer from './elements/Footer.astro';
+
+const { title } = Astro.props;
+---
+<Layout title={title}>
+    <Header/>
+		<div class="flex">
+			<Aside/>
+			<Main>
+				<div class="text-center">
+					<h2>{title}</h2>
+				</div>
+				<slot/>
+			</Main>
+		</div>
+	<Footer/>
+</Layout>

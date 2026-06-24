@@ -3,7 +3,16 @@ import Layout from "../../../layouts/Layout.astro";
 import { Image } from 'astro:assets';
 import welcome from '/src/assets/img/extra/textpassword.gif';
 ---
-<Layout title="<3 Lock" description="My gf lock.">
+<Layout title="<3 Lock">
+	<style>
+		body {
+			height: 100dvh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+		}
+	</style>
 	<section class="text-center">
 		<img src={welcome.src} alt="" class="m-auto">		
 		<div class="my-4">
@@ -22,6 +31,7 @@ import welcome from '/src/assets/img/extra/textpassword.gif';
 				}
 			}
 		</script>
+		<a href="/about/">Back</a>
 	</section>
 </Layout>
 

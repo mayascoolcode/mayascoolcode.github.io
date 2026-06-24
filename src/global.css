@@ -4,7 +4,7 @@
 /* Font Face */
 @font-face {
     font-family: display;
-    src: url('/src/assets/lib/fonts/Gotique.ttf');
+    src: url('/src/assets/lib/fonts/mieszkanie9.otf');
 }
 
 /* Theme */
@@ -48,7 +48,7 @@ p {
     @apply my-3;
 }
 a {
-    @apply text-accent underline;
+    @apply text-accent;
 }
 button {
     @apply px-2 py-1 text-fg hover:text-accent;
@@ -64,12 +64,4 @@ strong {
 }
 img {
     @apply p-2;
-}
-
-
-
-.no-underline {
-    & a {
-        text-decoration: none;
-    }
 }

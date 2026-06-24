@@ -4,20 +4,13 @@ import '/src/global.css';
 import favicon from '/favicon.ico';
 import { KnownAgents } from "@knownagents/sdk"
 
-// layout
-import Header from './elements/Header.astro';
-import Aside from './elements/Aside.astro';
-import Main from './elements/Main.astro';
-import Footer from './elements/Footer.astro';
-
 // Interface
 interface Props {
   	title: string;
-  	description: string;
 }
 
 // Constants
-const { title, description } = Astro.props;
+const { title } = Astro.props;
 const knownAgents = new KnownAgents("420e1fea-7931-4160-9fd6-bf87899f72fb");
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -28,7 +21,7 @@ const knownAgents = new KnownAgents("420e1fea-7931-4160-9fd6-bf87899f72fb");
 	<head>
 		<!-- Meta -->
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
+		<meta name="description" content="MMDungeon is a blog and archive for artist Mortalmutt."/>
 		<meta name="generator" content={Astro.generator} />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="keywords" content="Mortalmutt, mmdungeon" />
@@ -40,18 +33,10 @@ const knownAgents = new KnownAgents("420e1fea-7931-4160-9fd6-bf87899f72fb");
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 		<link rel="alternate" href="/src/feed.xml" type="application/rss+xml" title="RSS">
 		<!-- Title -->
-		<title>Mortalmutt ⛧ {title}</title>
+		<title>Mortalmutt's Dungeon ⛧ {title}</title>
 	</head>
 	<body>
-		<Header/>
-		<div class="flex">
-			<Aside/>
-			<Main>
-				<h2>{title}</h2>
-				<slot/>
-			</Main>
-		</div>
-		<Footer/>
+		<slot/>
 	</body>
 </html>
 

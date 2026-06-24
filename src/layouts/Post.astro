@@ -1,9 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Home from '../layouts/Home.astro';
 const {frontmatter} = Astro.props;
 ---
-<Layout title={frontmatter.title}>
+<Home title={frontmatter.title}>
     <section class="my-7 mx-5">
         <slot />
     </section>
-</Layout>
+</Home>

@@ -2,8 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="404">
+	<style>
+		body {
+			height: 100dvh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+		}
+	</style>
 	<section class="text-center">
 		<p>The page you requested is missing.</p>
+		<p> <a href="/home/">Home</a> </p>
 	</section>
 </Layout>
 

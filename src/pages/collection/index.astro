@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Home from '../../layouts/Home.astro';
 import { Image } from "astro:assets";
 import selfinsertwebring from "../assets/lib/js/selfinsertwebring.js";
 
@@ -11,7 +11,7 @@ const items = Object.values(folders).map(module => module.default);
         display: inline;
     }
 </style>
-<Layout title="Collection">
+<Home title="Collection">
     <section class="text-center">
         <!-- links -->
         <div>
@@ -57,4 +57,4 @@ const items = Object.values(folders).map(module => module.default);
             <div id="wwbtn"><a href="https://webmasterwebring.netlify.app"><img src="https://file.garden/ZrZSgsrYfQXsO7QH/ww/50x50.png"></a><br><a href="https://webmasterwebring.netlify.app?YOURSLUG-previous">prev</a> <a href="https://webmasterwebring.netlify.app?YOURSLUG-random">?</a> <a href="https://webmasterwebring.netlify.app?mortalmutt-next">next</a>
         </div>
     </section>
-</Layout>
+</Home>
