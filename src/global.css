@@ -6,10 +6,15 @@
     font-family: display;
     src: url('/src/assets/lib/fonts/mieszkanie9.otf');
 }
+@font-face {
+    font-family: text;
+    src: url('/src/assets/lib/fonts/basiic.ttf');
+}
 
 /* Theme */
 @theme {
     --font-display: display;
+    --font-text: text;
     --color-bg: #000;
     --color-fg: #fff;
     --color-accent: #b794c3;
@@ -30,7 +35,7 @@ html {
     @apply scroll-smooth;
 }
 body {
-    @apply text-base/6 font-sans bg-bg text-fg p-2 tracking-wide;
+    @apply text-base/6 font-text bg-bg text-fg p-2 tracking-wide;
 }
 header, aside, nav, main, footer {
     @apply p-2;
