@@ -1,6 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import Back from '../../../layouts/components/Back.astro';
+import Back from "../../../layouts/components/Back.astro";
 import { Image } from "astro:assets";
 
 const photo_folder = import.meta.glob<{ default: ImageMetadata }>("../../../assets/img/photos/*", { eager: true });
@@ -10,6 +10,6 @@ const photos = Object.values(photo_folder).map(module => module.default);
 	<section class="grid grid-cols-4" id="photos">
 		{photos.map((p) => (<Image src={p} alt="photo" loading="lazy"/>))}
 	</section>
-	<Back/>
+	<Back link="/"/>
 </Layout>
 

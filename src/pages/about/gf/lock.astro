@@ -1,5 +1,6 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
+import Back from "../../../layouts/components/Back.astro";
 import { Image } from 'astro:assets';
 import welcome from '/src/assets/img/extra/textpassword.gif';
 ---
@@ -31,7 +32,7 @@ import welcome from '/src/assets/img/extra/textpassword.gif';
 				}
 			}
 		</script>
-		<a href="/about/">Back</a>
 	</section>
+	<Back link="/about/"/>
 </Layout>
 
