@@ -70,11 +70,3 @@ strong {
 img {
     @apply p-2;
 }
-
-.center {
-    height: 100dvh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-content: center;
-}
