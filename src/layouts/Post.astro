@@ -1,9 +1,11 @@
 ---
 import Home from '../layouts/Home.astro';
+import Back from "../layouts/components/Back.astro";
 const {frontmatter} = Astro.props;
 ---
 <Home title={frontmatter.title}>
     <section class="my-7 mx-5">
         <slot />
     </section> 
+	<Back link="/about/journal/"/>
 </Home>
