@@ -70,3 +70,6 @@ strong {
 img {
     @apply p-2;
 }
+hr {
+    @apply border-none;
+}
