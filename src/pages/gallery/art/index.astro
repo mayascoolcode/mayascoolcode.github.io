@@ -1,6 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import Back from "../../../layouts/components/Back.astro";
+import Back from '../../../layouts/elements/Back.astro';
 import { Image } from "astro:assets";
 
 const drawings_folder = import.meta.glob<{ default: ImageMetadata }>("../../../assets/img/art/*", { eager: true });
@@ -12,7 +12,5 @@ const drawings = Object.values(drawings_folder).map(module => module.default);
             {drawings.map((d) => (<Image src={d} alt="drawing image" loading="lazy"/>))}
         </div>
     </section>
-	<Back link="/"/>
+	<Back/>
 </Layout>
-
-

@@ -7,16 +7,13 @@ import Aside from './elements/Aside.astro';
 import Main from './elements/Main.astro';
 import Footer from './elements/Footer.astro';
 
-const { title } = Astro.props;
+const { title, frontmatter } = Astro.props;
 ---
 <Layout title={title}>
     <Header/>
 		<div class="flex">
 			<Aside/>
-			<Main>
-				<div class="text-center">
-					<h2>{title}</h2>
-				</div>
+			<Main>	
 				<slot/>
 			</Main>
 		</div>

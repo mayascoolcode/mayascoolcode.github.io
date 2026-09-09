@@ -36,6 +36,7 @@ html {
 }
 body {
     @apply text-base/6 font-text bg-bg text-fg p-2 tracking-wide;
+    max-width: 1000px;
 }
 header, aside, nav, main, footer {
     @apply p-2;
@@ -47,7 +48,7 @@ h2 {
     @apply text-4xl font-display text-accent text-center py-2;
 }
 h3 {
-    @apply text-3xl text-accent py-3 font-display;
+    @apply text-3xl py-3 font-bold;
 }
 p {
     @apply my-3;

@@ -1,15 +1,14 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import Back from "../../../layouts/components/Back.astro";
+import Back from '../../../layouts/elements/Back.astro';
 import { Image } from "astro:assets";
 
-const photo_folder = import.meta.glob<{ default: ImageMetadata }>("../../../assets/img/photos/*", { eager: true });
-const photos = Object.values(photo_folder).map(module => module.default);
+const photos = import.meta.glob<{ default: ImageMetadata }>("../../../assets/img/photos/*", { eager: true });
+const p = Object.values(photos).map(module => module.default);
 ---
 <Layout title="Photos">
-	<section class="grid grid-cols-4" id="photos">
-		{photos.map((p) => (<Image src={p} alt="photo" loading="lazy"/>))}
+	<section id="Photos" class="grid grid-cols-4" id="photos">
+		{p.map((p) => (<Image src={p} alt="photo" loading="lazy"/>))}
 	</section>
-	<Back link="/"/>
+	<Back/>
 </Layout>
-

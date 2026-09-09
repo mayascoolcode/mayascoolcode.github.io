@@ -1,13 +1,22 @@
 ---
-import Home from '../../layouts/Home.astro';
+import Layout from '../../layouts/Layout.astro';
+import Back from '../../layouts/elements/Back.astro';
+
+const {frontmatter} = Astro.props;
 ---
-<Home title="Blog">
-	<section class="text-left">
-		<h3>2026</h3>
-		<ul>
-			<li><a href="/posts/2026/8_3/">This is my first blog post</a></li>
-		</ul>
-	</section>
-</Home>
-
-
+<Layout title="Blog">
+	<div class="flex">
+		<div class="flex-1/4 border-r-1 border-accent p-2 text-xs">
+        	<h4>2026</h4>
+            <br>
+			<ul>
+				<li><a href="/posts/8_3_26/">Extended Biography</a></li>
+				<li><a href="/posts/9_8_26/">School is scary</a></li>
+			</ul>
+		</div>
+		<div class="flex-3/4 p-3">
+			<slot />
+		</div>
+	</div>
+	<Back/>
+</Layout>

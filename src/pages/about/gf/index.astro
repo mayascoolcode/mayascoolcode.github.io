@@ -1,7 +1,7 @@
 ---
 // Import
 import Layout from "../../../layouts/Layout.astro";
-import Back from "../../../layouts/components/Back.astro";
+import Back from "../../../layouts/elements/Back.astro";
 import { Image } from 'astro:assets';
 
 // Images
@@ -9,6 +9,11 @@ import gfPainting from '../../../assets/img/extra/gf.webp';
 import skull from '../../../assets/img/collection/dividers/skull.png';
 import blackpurpleheart from '../../../assets/img/collection/dividers/blackpurpleheart.png';
 ---
+<style>
+	body {
+		padding: 2rem;
+	}
+</style>
 <Layout title="<3">
 	<section>
 		<div>
@@ -30,6 +35,6 @@ import blackpurpleheart from '../../../assets/img/collection/dividers/blackpurpl
 			<Image src={blackpurpleheart} alt="skull" class="m-auto"/>
 		</div>
 	</section>
-	<Back link="/about/"/>
+	<Back/>
 </Layout>
 
