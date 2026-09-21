@@ -44,12 +44,6 @@ header, aside, nav, main, footer {
 h1 {
     @apply text-5xl font-display;
 }
-h2 {
-    @apply text-4xl font-display text-accent text-center py-2;
-}
-h3 {
-    @apply text-3xl py-3 font-bold;
-}
 p {
     @apply my-3;
 }
