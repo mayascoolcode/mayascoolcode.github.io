@@ -1,33 +1,23 @@
-/* Import */
 @import "tailwindcss";
 
-/* Font Face */
 @font-face {
     font-family: display;
-    src: url('/src/assets/lib/fonts/mieszkanie9.otf');
-}
-@font-face {
-    font-family: text;
-    src: url('/src/assets/lib/fonts/basiic.ttf');
+    src: url('/src/assets/lib/fonts/Jeffrson.ttf');
 }
 
-/* Theme */
 @theme {
     --font-display: display;
-    --font-text: text;
     --color-bg: #000;
     --color-fg: #fff;
     --color-accent: #b794c3;
     --color-dim: #4f2d69;
 }
 
-/* Selection */
 ::selection {
     background: var(--color-dim);
     color: var(--color-fg);
 }
 
-/* Elements */
 * { 
     cursor: url('https://cdn.cursors-4u.net/previews/pink-paw-print-820c6758-32.webp') 32 32, auto !important; 
 }
@@ -35,36 +25,19 @@ html {
     @apply scroll-smooth;
 }
 body {
-    @apply text-base/6 font-text bg-bg text-fg p-2 tracking-wide;
-    max-width: 1000px;
-}
-header, aside, nav, main, footer {
-    @apply p-2;
+    @apply m-auto bg-bg text-fg text-base font-sans text-center flex flex-col justify-center content-center;
+	height: 100dvh;
+    max-width: 1000px
 }
 h1 {
     @apply text-5xl font-display;
 }
-p {
-    @apply my-3;
-}
-a {
+a, label {
     @apply text-accent;
-}
-button {
-    @apply px-2 py-1 text-fg hover:text-accent;
 }
 small {
     @apply text-dim text-xs;
 }
-details, summary {
-    @apply py-1;
-}
-strong {
-    @apply text-accent;
-}
-img {
+p, img {
     @apply p-2;
-}
-hr {
-    @apply border-none;
 }

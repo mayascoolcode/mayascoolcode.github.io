@@ -1,7 +1,7 @@
 ---
-import Home from '../../layouts/Home.astro';
 import { Image } from 'astro:assets';
 import selfinsertwebring from "../assets/lib/js/selfinsertwebring.js";
+import Layout from '../../layouts/Layout.astro';
 
 const toybox = import.meta.glob<{ default: ImageMetadata }>("../../assets/toys/*", { eager: true });
 const toy = Object.values(toybox).map(module => module.default);
@@ -11,7 +11,7 @@ const toy = Object.values(toybox).map(module => module.default);
         display: inline;
     }
 </style>
-<Home title='Toybox'>
+<Layout title='Toybox'>
     <section class="text-center">
         <a href="https://cinni.net/" target="_blank" rel="noopener noreferrer"><img src="https://cinni.net/images/button/cinni_angelbutton3.gif" alt=""></a>
         <a href="https://grossgirl94.neocities.org/" target="_blank" rel="noopener noreferrer"><img src="https://grossgirl94.neocities.org/photos/grossgirl94%20button%20transparent.gif" alt=""></a>
@@ -28,7 +28,6 @@ const toy = Object.values(toybox).map(module => module.default);
                 document.getElementById("selfinsertwebring").appendChild(templateWebring);
             </script>
         </div>
-        <div id="trans_webring"> <script is:inline src="https://transring.neocities.org/ring.js"></script> </div>
         <div id="noai_webring">
             <map name="noailong">
                 <area href="https://baccyflap.com/noai" target="_blank" shape="poly" coords="51,1,41,29,287,29,298,1" alt="no ai webring" title="no ai webring">
@@ -39,5 +38,6 @@ const toy = Object.values(toybox).map(module => module.default);
             <img usemap="#noailong" src="https://baccyflap.com/noai/longwidget.gif" alt="a long purple-and-blue star-spangled bar with purple-and-blue white-haloed letters in it that read THE NO AI WEBRING. the bar extends into two arrows pointing left and right, labeled PREV and NEXT, and there's a little button labeled RANDOM"> 
         </div>
         <div id="wwbtn"><a href="https://webmasterwebring.netlify.app"><img src="https://file.garden/ZrZSgsrYfQXsO7QH/ww/50x50.png"></a><br><a href="https://webmasterwebring.netlify.app?YOURSLUG-previous">prev</a> <a href="https://webmasterwebring.netlify.app?YOURSLUG-random">?</a> <a href="https://webmasterwebring.netlify.app?mortalmutt-next">next</a></div>
+        <div class="flex justify-center"> <div id="trans_webring"> <script is:inline src="https://transring.neocities.org/ring.js"></script> </div> </div>
     </section>
-</Home>
+</Layout>
