@@ -1,13 +1,30 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
+import Link from '../layouts/components/_link.astro';
+import Back from '../../layouts/components/_back.astro';
 ---
 <Layout title='Index'>
-	<section>
-		<div>
-			<p>Welcome to the dungeon. </p>
-			<script type="text/javascript" src="//counter1.fc2.com/counter.php?id=40502263&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=40502263&main=1" /></noscript>
-			<iframe src="https://www3.cbox.ws/box/?boxid=3555384&boxtag=45aUsY" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
-		</div>
-	</section>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			height: 100dvh;
+			justify-content: space-between;
+			background-image: url(https://i.pinimg.com/736x/49/57/80/4957807b27f89473bd6fff834d3b7e95.jpg);
+			background-attachment: fixed;
+  			overflow: hidden;
+		}
+	</style>
+	<header class="px-2">
+		<h1>mmdungeon.xyz</h1>
+	</header>
+	<main>
+		<Link navlink='Diary' link="https://mortalmutt999.tumblr.com/" img="https://i.pinimg.com/originals/8e/c1/96/8ec1963da48311539e5f8d7811cd9104.gif" position='left: 42vw; top: 18vw; width: 15vw;'/>
+		<Link navlink='Toybox' link="/toybox/" img="https://i.pinimg.com/originals/56/6f/d9/566fd9981bfcedc2eec83ffb95d577c4.gif" position='position: absolute; left: 70vw; top: 25vw; width: 18vw;'/>
+		<Link navlink='Webmistress' link="/webmistress/" img="https://i.pinimg.com/originals/21/b1/8e/21b18e36c3b8cd598ddde91d8e619634.gif" position='left: 20vw; top: 18vw; width: 15vw;'/>
+	</main>
+	<footer class="absolute bottom-2 right-4">
+		<small>&copy; MORTALMUTT999</small>
+	</footer>
 </Layout>

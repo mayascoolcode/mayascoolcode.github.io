@@ -1,0 +1,17 @@
+---
+interface Props {
+  	link: string;
+    img: string;
+    navlink: string;
+    position: string;
+}
+const { link, img, navlink, position } = Astro.props;
+---
+<div style={position} class="absolute">
+	<a href={link}>
+		<div class="relative">
+			<img src={img} alt="">
+		</div>
+		<span class=" text-5dvw absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">{navlink}</span>
+	</a>
+</div>

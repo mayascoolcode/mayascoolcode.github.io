@@ -1,12 +1,17 @@
 ---
 import { Image } from 'astro:assets';
-import selfinsertwebring from "../assets/lib/js/selfinsertwebring.js";
 import Layout from '../../layouts/Layout.astro';
+import Back from '../../layouts/components/_back.astro';
 
+import selfinsertwebring from "../assets/lib/js/selfinsertwebring.js";
 const toybox = import.meta.glob<{ default: ImageMetadata }>("../../assets/toys/*", { eager: true });
 const toy = Object.values(toybox).map(module => module.default);
 ---
 <style>
+    body {
+        max-width: 1000px;
+        margin: auto;
+    }
     img {
         display: inline;
     }
@@ -39,5 +44,8 @@ const toy = Object.values(toybox).map(module => module.default);
         </div>
         <div id="wwbtn"><a href="https://webmasterwebring.netlify.app"><img src="https://file.garden/ZrZSgsrYfQXsO7QH/ww/50x50.png"></a><br><a href="https://webmasterwebring.netlify.app?YOURSLUG-previous">prev</a> <a href="https://webmasterwebring.netlify.app?YOURSLUG-random">?</a> <a href="https://webmasterwebring.netlify.app?mortalmutt-next">next</a></div>
         <div class="flex justify-center"> <div id="trans_webring"> <script is:inline src="https://transring.neocities.org/ring.js"></script> </div> </div>
+		<div> <a href="https://www.mabsland.com/Adoption.html" target="_blank" rel="noopener noreferrer"><img src="https://www.mabsland.com/Pandas/Censor_NC17a.gif" class="m-auto" alt=""></a> </div>
+		<div class="py-6 flex justify-center" id="contain_moon"><div><div style="filter:drop-shadow(0 0 18px hsl(298,100%,28%))"></div><div></div><div></div></div><script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=20&lightColor=rgb(211,183,227)&shadeColor=rgb(0,0,0)&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="60px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b)}};a.open("GET",url,true);a.send()})()</script></div>
     </section>
+    <Back/>
 </Layout>

@@ -1,9 +1,17 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
+import Back from '../../layouts/components/_back.astro';
 ---
 <Layout title='Webmistress'>
-	<section>
+    <style>
+        body {
+            text-align: center;
+            display: flex;
+            height: 100dvh;
+        }
+    </style>
+	<main class="m-auto">
         <!-- image -->
         <a href="./gf/lock/"><img src="" alt="<3"></a>
         
@@ -16,5 +24,6 @@ import Layout from '../../layouts/Layout.astro';
             <!-- <a href="https://www.instagram.com/mortalmutt999/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a> -->
             <a href="mailto:contact@mmdungeon.xyz"><i class="fa-solid fa-envelope"></i></a>
         </ul>
-    </section>
+    </main>
+    <Back/>
 </Layout>
