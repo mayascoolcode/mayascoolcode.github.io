@@ -2,14 +2,19 @@
 // Import
 import { Image } from 'astro:assets';
 import Layout from '../../../layouts/Layout.astro';
+import Back from '../../../layouts/components/_back.astro';
 
 // Images
 import gfPainting from '../../../assets/lib/img/gf.webp';
-import skull from '../../../assets/toys/skull.png';
-import blackpurpleheart from '../../../assets/toys/blackpurpleheart.png';
+import skull from '../../../assets/lib/img/dividers/skull.png';
+import blackpurpleheart from '../../../assets/lib/img/dividers/blackpurpleheart.png';
 ---
 <style>
-	
+body {
+    max-width: 800px;
+    margin: auto;
+	background-image: url(https://i.pinimg.com/originals/b0/ac/c7/b0acc7034fa8a50aee3bba074e06854a.gif);
+}	
 </style>
 <Layout title="<3">
 	<section>
@@ -32,5 +37,6 @@ import blackpurpleheart from '../../../assets/toys/blackpurpleheart.png';
 			<Image src={blackpurpleheart} alt="skull" class="m-auto"/>
 		</div>
 	</section>
+    <Back/>
 </Layout>
 
